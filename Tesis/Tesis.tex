@@ -11,40 +11,45 @@
 \addbibresource{bibliografia.bib}
 
 %%%%For producing modified TOC with less space inbetween.
-% \usepackage{tocloft}
-% \setlength\cftparskip{-2pt}
-% \setlength\cftbeforesecskip{1pt}
-% \setlength\cftaftertoctitleskip{2pt}
+\usepackage{tocloft}
+\setlength\cftparskip{-2pt}
+\setlength\cftbeforesecskip{1pt}
+\setlength\cftaftertoctitleskip{2pt}
 
 %\includeonly{dedicatoria} %Por debug solo compila un capitulo
 
-
 \begin{document}
 
-\include{Portada}
-\include{dedicatoria}
-
-
 \selectlanguage{spanish}
-
-%%%%Change numbering to alphabetic
-\pagenumbering{alph}
 
 %%%%Change numbering to roman
 \clearpage \pagenumbering{roman}
 %\listoftodos
 
+\include{portada}
+\cleardoublepage
+
+\include{dedicatoria}
+\cleardoublepage
+
 \include{agradecimientos}
+\cleardoublepage
 
 \include{resumen}
+\cleardoublepage
+
 %%%%For changing the title of table of contents
 %\renewcommand*\contentsname{}
 \tableofcontents
-\listoffigures
-\listoftables
-\listofalgorithms
 \cleardoublepage
 
+\listoffigures
+
+\cleardoublepage
+\listoftables
+
+%\listofalgorithms
+%\cleardoublepage
 
 %%%%Change numbering to arabic
 \clearpage \pagenumbering{arabic}
@@ -59,6 +64,7 @@
 
 \include{conclusiones}
 
+% If you want to change the bibliography style
 %\bibliographystyle{ieee_esp}
 \nocite{*}
 

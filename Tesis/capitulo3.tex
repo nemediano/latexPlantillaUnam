@@ -1,15 +1,23 @@
 \chapter{Ciencias de la computación}
 \label{chap:cs}
 
-En éste capitulo, dare algunos tips enfocados a ls ciencias de la computación
+\epigraph{\say{We should continually be striving to transform every art into a science: in the process, we advance the art.}}{\textit{Donald Knuth \\ Computer Programming as an Art}}
 
-Primero voy a mostar como incluir algoritmos en forma de pseudocódigo.
-Y desde luego se incluyen en el indice y se pueden referencias asi: El Algoritmo~\ref{alg:euclid} es el primer algoritmo en la historia. Se puede referenciar una linea del algoritmo. El ciclo while termina en la linea line~\ref{euclidendwhile}. 
+En éste capítulo, daré algunos tips enfocados a las ciencias de la computación.
+Empezamos con el ejemplo de como poner un epígrafe.
+Este ejemplo también demuestra como poner \say{comillas} en \LaTeX{}
+
+Primero voy a mostrar cómo incluir algoritmos en forma de pseudocódigo.
+Y desde luego se incluyen en el índice y se pueden referencias así: 
+El Algoritmo~\ref{alg:euclid} es el primer algoritmo en la historia.
+Se puede referenciar una línea del algoritmo.
+El ciclo while termina en la línea line~\ref{euclidendwhile}.
 Las ídeas las tomé de este enlace \href{https://en.wikibooks.org/wiki/LaTeX/Algorithms#Typesetting_using_the_algorithmicx_package}{wikibook} y de éste \href{https://tex.stackexchange.com/questions/229355/algorithm-algorithmic-algorithmicx-algorithm2e-algpseudocode-confused}{post}.
 
-Por defecto el entorno de algoritmo usa todo el ancho de la página.
-Es decir, se sale de los márgenes.
-Hay un \href{https://tex.stackexchange.com/questions/350434/adjust-width-of-algorithm-float}{truco} para hacerlo entrar en un cierto ancho. Sin embargo, recomiendo usar el truco con moderacion.
+El entorno de algoritmo como flotante puede salirse de los márgenes de una pagina si no lo configuras correctamente.
+Hay un \href{https://tex.stackexchange.com/questions/350434/adjust-width-of-algorithm-float}{truco} para hacerlo entrar en un cierto ancho.
+Sin embargo, recomiendo usar el truco como ultima alternativa.
+En estos ejemplos no fue necesario.
 
 \begin{algorithm}[H]
 \caption{Algoritmo de Euclides}
@@ -29,7 +37,7 @@ Hay un \href{https://tex.stackexchange.com/questions/350434/adjust-width-of-algo
 
 
 \section{Código fuente}
-Aquí se muestra como incluir código fuente usando el paquete mined.
+Aquí se muestra cómo incluir código fuente usando el paquete minted.
 Este es un ejemplo en el lenguaje C.
 \begin{listing}
 \begin{minted}{cpp}
@@ -41,10 +49,10 @@ int main() {
 \caption{Un programa de ejemplo en C}\label{lst:hello}
 \end{listing}
 
-Este es otro ejemplo de como incluir Python dentro de un parrafo: \mintinline{python}{print(x**2)}.
-Finalmente, lo mas util es incluir el codigo fuente desde un archivo externo: Vean  el Listado~\ref{lst:example} como ejemplo.
+Este es otro ejemplo de cómo incluir Python dentro de un párrafo: \mintinline{python}{print(x**2)}.
+Finalmente, lo más útil es incluir el código fuente desde un archivo externo: Vean  el Listado~\ref{lst:example} como ejemplo.
 Me ayude muchisimo de \href{https://tex.stackexchange.com/questions/252263/alignment-of-minted-line-numbers}{aquí} y de la \href{https://www.overleaf.com/learn/latex/Code_Highlighting_with_minted}{ayuda de Overleaf}.
-Estamos usando el mismo \textenglish{hack} que usamos con los algoritmos para hacer el listado entrar dentro de los margenes de la página.
+Observa la configuración que hice en el archivo \verb|Thesis.sty| para ver cómo obtuve el resultado del Listado~\ref{lst:example}.
 
 \begin{listing}
 \inputminted[
@@ -53,3 +61,4 @@ Estamos usando el mismo \textenglish{hack} que usamos con los algoritmos para ha
   ]{cpp}{src/GccTest.cpp}
   \caption{Una implementación defectuosa de insertion sort}\label{lst:example}
 \end{listing}
+
