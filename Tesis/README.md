@@ -1,6 +1,6 @@
 # Plantilla para una tesis de la UNAM
 
-Esta plantilla sirve esta planeada para hacer una tesis de la [UNAM](https://www.unam.mx/). Aunque en el ejemplo se muestra una tesis de licenciatura de [Matemáticas Aplicadas y Computación](https://mac.acatlan.unam.mx/) de la [FES Acatlán](https://www.acatlan.unam.mx/), todo esto puede ser editado por lo que en general es una plantilla para hacer una tesis en español. Puedes ver el [pdf](/Tesis.pdf) con con un ejemplo de su uso.
+Esta plantilla sirve esta planeada para hacer una tesis de la [UNAM](https://www.unam.mx/). Aunque en el ejemplo se muestra una tesis de licenciatura de [Matemáticas Aplicadas y Computación](https://mac.acatlan.unam.mx/) de la [FES Acatlán](https://www.acatlan.unam.mx/), todo esto puede ser editado por lo que en general es una plantilla para hacer una tesis en español. Puedes ver el [pdf](Tesis/Tesis.pdf) con con un ejemplo de su uso.
 
 La plantilla está primordialmente implementada en el archivo `Thesis.sty`. El preámbulo está implementado en el archivo `Tesis.tex` y desde este se incluyen los demás archivos.
 
@@ -27,3 +27,4 @@ La primera vez, para compilar desde cero, se puede hacer:
 
 
 José Doroteo Arango Arámbula
+Enrique Graue Wiechers
