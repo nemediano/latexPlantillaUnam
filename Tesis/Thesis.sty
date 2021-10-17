@@ -1,0 +1,142 @@
+\ProvidesPackage{Thesis}
+
+%%%%Installing texlive-lang-spanish
+%%%%is mandatory.
+% Language options (we set two languages in this text)
+\usepackage{polyglossia}
+\setmainlanguage{spanish}
+\setotherlanguage[variant=american]{english}
+
+%%%%Electronic version
+%\usepackage[obeyDraft, spanish, color=green!40, colorinlistoftodos=true]{todonotes}
+%%%%Print version
+% \usepackage[obeyDraft, spanish, backgroundcolor=white, linecolor=black, colorinlistoftodos=true]{todonotes}
+%%%%To completely disable todonotes, regardless of the draft version of the document.
+% \usepackage[disable, textsize=tiny, spanish, color=green!40]{todonotes}
+%%%%To enable todonotes, regardless of the draft version of the document.
+% \usepackage[textsize=tiny, spanish, color=green!40]{todonotes}
+%%%%Print version with enabled todonotes.
+% \usepackage[spanish, backgroundcolor=white, linecolor=black, colorinlistoftodos=true]{todonotes}
+
+%These four are required to create the cover
+\usepackage{graphicx} % Images
+\usepackage{subcaption} % The hability of using subfigures
+\usepackage[normalem]{ulem}
+%%%%For displaying in multiple columns.
+\usepackage{multicol}
+%%%%For spanning multiple rows.
+\usepackage{multirow}
+
+%%%%For using \text{} in math mode.
+%%%%Also for \dfrac and \align
+\usepackage{amsmath}
+%%%%Several math symbols, like \bigstar and \smallsetminus.
+\usepackage{amssymb}
+
+\usepackage{textcomp} %Space after special symbols
+
+%Profesionall looking tables
+\usepackage{booktabs}
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+
+%Set page space before everything else
+\usepackage[letterpaper,margin=3cm]{geometry}
+
+%%%%Pretty headers
+\usepackage{fancyhdr}
+\setlength{\headheight}{16pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE]{\textsc{\nouppercase{\leftmark}}}
+\fancyhead[LO]{\textsc{\nouppercase{\rightmark}}}
+\fancypagestyle{plain}{ %
+\fancyhf{} % remove everything
+\renewcommand{\headrulewidth}{0pt} % remove lines as well
+\renewcommand{\footrulewidth}{0pt}
+}
+
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{1.5ex}
+
+\usepackage{amsthm}
+%%%%Translations
+\theoremstyle{plain}
+\newtheorem{definition}{Definición}[section]
+\newtheorem{example}{Ejemplo}[section]
+
+%%%%For its use with todonotes (I put to obeyDraft), we must say that it's a final version
+%%%%otherwise no links will appear.
+\usepackage[final,unicode,colorlinks=true,citecolor=blue,linkcolor=blue,plainpages=false,
+pdfpagelabels=true,pdfauthor={Jorge Antonio García Galicia},pdftitle={Modelado Gráfico de un Cuerpo Neumático con OpenGL a Base de Ecuaciones Diferenciales},pdfkeywords={modelado, graficas por computadora, ecuaciones diferenciales, OpenGL, cuerpo flexible}]{hyperref}
+%%%%If I set draft, no links will appear (for printable version).
+% \usepackage[draft,pdftex,unicode,colorlinks=true,citecolor=blue,linkcolor=blue,plainpages=false,
+% pdfpagelabels=true,pdfauthor={Laura Leonides}]{hyperref}
+
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4}
+
+\usepackage{setspace} %El espacio de interlinead
+%Espacio de 1.5 lineas
+\onehalfspacing
+
+%Este paquete me deja customizar los pies de las figuras y las tablas
+\usepackage[margin=2cm,font=footnotesize,labelfont=bf]{caption}
+
+%%Estos dos paquetes me dejan poner pseudocodigos se usan en conjunto
+\usepackage{algpseudocode}
+\usepackage{algorithm} %float enviroment for algorithms
+%Make the comments similar to cpp
+%\algrenewcommand{\algorithmiccomment}[1]{\hskip3em$//$ #1}
+%Poniendo los encabezados de los algoritmos en español
+\floatname{algorithm}{Algoritmo}
+\renewcommand{\algorithmicrequire}{\textbf{Entradas:}}
+\renewcommand{\algorithmicensure}{\textbf{Salidas:}}
+\renewcommand{\listalgorithmname}{Índice de algoritmos}
+
+\usepackage{url}
+%\usepackage[color]{changebar} %Barras de cambio
+%\cbcolor{blue} %Color de barra de cambio
+
+%\pagestyle{fancyplain}
+\newtheorem{teo}{Teorema}
+\newtheorem*{teoSN}{Teorema}
+
+\usepackage{bm}
+\usepackage{mathrsfs}
+\usepackage{amsthm}
+
+\usepackage{dirtytalk} %For using qutation marks (ro comillas in spanish)
+
+\usepackage{epigraph} %To add epighaphs
+\setlength{\epigraphwidth}{0.6\textwidth} %If not space for epigharp is to short
+
+\usepackage[newfloat=true]{minted} %For inserting source code and embed source files
+%Requieres compilation using:
+% $xelatex -shell-escape input.tex
+%In order to work this temple needs to be build like this:
+% 1 XeLaTeX
+% 2 Biber 
+%    This tool is not in the default Kile: I need to install the package and then configure 
+%    here: https://tex.stackexchange.com/questions/154751/biblatex-with-biber-configuring-my-editor-to-avoid-undefined-citations/154763#154763)
+% 3 XeLaTex
+% 4 XeLateX
+% 5 ViewPDF
+
+% Define a non-float enviroment for codes that span multiple pages
+% I took the hack from here
+% https://tex.stackexchange.com/questions/33866/algorithm-tag-and-page-break
+% https://tex.stackexchange.com/questions/254044/caption-and-label-on-minted-code
+\DeclareCaptionFormat{mitedFormat}{%
+    \textbf{#1#2}#3}
+\DeclareCaptionStyle{minetdStyle}{skip=0cm,width=.85\textwidth,justification=centering,
+  font=footnotesize,singlelinecheck=off,format=mitedFormat,labelsep=space}
+\newenvironment{mintedCode}{\captionsetup{type=listing,style=minetdStyle}}{}
+
+% Normal minted setup for the whole document
+\SetupFloatingEnvironment{listing}{name=Listado}
+% Normal minted setup for the C++ language
+\setminted[cpp]{frame=lines,framesep=0.25cm,baselinestretch=1,fontsize=\scriptsize,breaklines}
+\setmintedinline[cpp]{fontsize=auto}
+
+\usepackage{csquotes} % Because if is not present HERE polyglossia throws a warning

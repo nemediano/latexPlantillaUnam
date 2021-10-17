@@ -1,0 +1,69 @@
+%%%%Draft version
+% \documentclass[12pt,letterpaper,spanish,draft,twoside]{book}
+%%%%Final version
+\documentclass[12pt,letterpaper,spanish,twoside,final]{book}
+
+\usepackage{Thesis}
+% New bibliography system: biber (No bibtex needed)
+\usepackage[
+  backend=biber
+]{biblatex}
+\addbibresource{bibliografia.bib}
+
+%%%%For producing modified TOC with less space inbetween.
+% \usepackage{tocloft}
+% \setlength\cftparskip{-2pt}
+% \setlength\cftbeforesecskip{1pt}
+% \setlength\cftaftertoctitleskip{2pt}
+
+%\includeonly{dedicatoria} %Por debug solo compila un capitulo
+
+
+\begin{document}
+
+\include{Portada}
+\include{dedicatoria}
+
+
+\selectlanguage{spanish}
+
+%%%%Change numbering to alphabetic
+\pagenumbering{alph}
+
+%%%%Change numbering to roman
+\clearpage \pagenumbering{roman}
+%\listoftodos
+
+\include{agradecimientos}
+
+\include{resumen}
+%%%%For changing the title of table of contents
+%\renewcommand*\contentsname{}
+\tableofcontents
+\listoffigures
+\listoftables
+\listofalgorithms
+\cleardoublepage
+
+
+%%%%Change numbering to arabic
+\clearpage \pagenumbering{arabic}
+
+\include{introduccion}
+
+\include{capitulo1}
+ 
+\include{capitulo2}
+
+\include{capitulo3}
+
+\include{conclusiones}
+
+%\bibliographystyle{ieee_esp}
+\nocite{*}
+
+\printbibliography
+
+\addcontentsline{toc}{chapter}{\bibname}
+
+\end{document}

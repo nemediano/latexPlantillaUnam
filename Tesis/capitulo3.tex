@@ -1,0 +1,55 @@
+\chapter{Ciencias de la computación}
+\label{chap:cs}
+
+En éste capitulo, dare algunos tips enfocados a ls ciencias de la computación
+
+Primero voy a mostar como incluir algoritmos en forma de pseudocódigo.
+Y desde luego se incluyen en el indice y se pueden referencias asi: El Algoritmo~\ref{alg:euclid} es el primer algoritmo en la historia. Se puede referenciar una linea del algoritmo. El ciclo while termina en la linea line~\ref{euclidendwhile}. 
+Las ídeas las tomé de este enlace \href{https://en.wikibooks.org/wiki/LaTeX/Algorithms#Typesetting_using_the_algorithmicx_package}{wikibook} y de éste \href{https://tex.stackexchange.com/questions/229355/algorithm-algorithmic-algorithmicx-algorithm2e-algpseudocode-confused}{post}.
+
+Por defecto el entorno de algoritmo usa todo el ancho de la página.
+Es decir, se sale de los márgenes.
+Hay un \href{https://tex.stackexchange.com/questions/350434/adjust-width-of-algorithm-float}{truco} para hacerlo entrar en un cierto ancho. Sin embargo, recomiendo usar el truco con moderacion.
+
+\begin{algorithm}[H]
+\caption{Algoritmo de Euclides}
+\label{alg:euclid}
+\begin{algorithmic}[1] % The number tells where the line numbering should start 0 for no number
+    \Procedure{Euclid}{$a,b$} \Comment{El g.c.d. de $a$ y $b$}
+    \State $r\gets a \bmod b$
+    \While{$r\not=0$} \Comment{Si $r = 0$ ya tenemos la respuesta}
+        \State $a \gets b$
+        \State $b \gets r$
+        \State $r \gets a \bmod b$
+    \EndWhile\label{euclidendwhile}
+    \State \textbf{return} $b$\Comment{$gcd = b$}
+    \EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+
+\section{Código fuente}
+Aquí se muestra como incluir código fuente usando el paquete mined.
+Este es un ejemplo en el lenguaje C.
+\begin{listing}
+\begin{minted}{cpp}
+int main() {
+  printf("hello, world");
+  return 0;
+}
+\end{minted}
+\caption{Un programa de ejemplo en C}\label{lst:hello}
+\end{listing}
+
+Este es otro ejemplo de como incluir Python dentro de un parrafo: \mintinline{python}{print(x**2)}.
+Finalmente, lo mas util es incluir el codigo fuente desde un archivo externo: Vean  el Listado~\ref{lst:example} como ejemplo.
+Me ayude muchisimo de \href{https://tex.stackexchange.com/questions/252263/alignment-of-minted-line-numbers}{aquí} y de la \href{https://www.overleaf.com/learn/latex/Code_Highlighting_with_minted}{ayuda de Overleaf}.
+Estamos usando el mismo \textenglish{hack} que usamos con los algoritmos para hacer el listado entrar dentro de los margenes de la página.
+
+\begin{listing}
+\inputminted[
+  firstline=54, %If you omit this two fields, the whole file is pulled
+  lastline=68
+  ]{cpp}{src/GccTest.cpp}
+  \caption{Una implementación defectuosa de insertion sort}\label{lst:example}
+\end{listing}
