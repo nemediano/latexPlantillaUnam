@@ -24,7 +24,3 @@ La primera vez, para compilar desde cero, se puede hacer:
 1. Ejecutar XeLaTeX
 1. Ejecutar XeLaTeX
 1. Ver el pdf
-
-
-José Doroteo Arango Arámbula
-Enrique Graue Wiechers
