@@ -1,0 +1,119 @@
+\documentclass[10pt,oneside]{article}
+\usepackage{amsmath} % Simbolos refinados de matemáticas
+\usepackage{graphicx} % Incluir imágenes
+\usepackage{subcaption} % Poder usar subfiguras
+\usepackage{amsfonts}
+\usepackage{amssymb} % Los simbolos el los conjuntos numéricos
+
+% Opciones de lenguaje usando polyglossia (defino dos para este documento)
+\usepackage{polyglossia}
+\setmainlanguage{spanish}
+\setotherlanguage[variant=american]{english}
+
+
+% El sistema de bibliografá es Biber (no necesitas BibTeX)
+\usepackage[
+  backend=biber
+]{biblatex}
+\addbibresource{biblio.bib}
+
+% Márgenes y tamaño del papel
+\usepackage[
+  letterpaper,
+  left=1cm,
+  right=1cm,
+  top=1.5cm,
+  bottom=1.5cm
+]{geometry}
+
+% Poner los links en azul y definir los metadatos del pdf
+\usepackage[
+  final,
+  unicode,
+  colorlinks=true,
+  citecolor=blue,
+  linkcolor=blue,
+  plainpages=false,
+  urlcolor=blue,
+  pdfpagelabels=true,
+  pdfsubject={Cálculo},
+  pdfauthor={José Doroteo Arango Arámbula},
+  pdftitle={Tarea 1},
+  pdfkeywords={UNAM, FES Acatlán, 2021-I}
+]{hyperref}
+
+% Tablas con estilo profesional
+\usepackage{booktabs}
+
+% Para poner algortmos en pseudo código
+\usepackage{algpseudocode}
+\usepackage{algorithm} %Ambiente flotante para los algoritmos
+%Hacer los comentarios en el pseudocodigo como en C++
+%\algrenewcommand{\algorithmiccomment}[1]{\hskip3em$//$ #1}
+
+% Definición del encabezado y del pies de página
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\fancyhf{}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Cálculo I} %Nombre de la materia
+\fancyhead[C]{José Doroteo Arango Arámbula} % Nombre del alumno
+\fancyhead[R]{\href{mailto:panchovilla@gmail.com}{panchovilla@gmail.com}} % Email
+\fancyfoot[R]{Profesor: Dr. Enrique Graue Wiechers}
+% https://tex.stackexchange.com/questions/227/how-can-i-add-page-of-on-my-document
+\fancyfoot[C]{\thepage\ of \pageref*{LastPage}}
+%\fancyfoot[C]{ of }
+\fancyfoot[L]{Grupo: 1154} % Grupo
+\renewcommand{\headrulewidth}{2pt} 
+\renewcommand{\footrulewidth}{2pt}
+
+\usepackage[newfloat=true]{minted} %Para insertar código fuente en algún lenguaje de programación
+% Requiere que comiples usando:
+% $xelatex -shell-escape input.tex
+
+% Para el correcto funcinamiento, esta plantilla debe compilarse asi:
+% 1 XeLaTeX
+% 2 Biber 
+%    Antes de 20.04 esta herramineta no estaba en los repositorios oficiales de Ubuntu
+%    ver: https://tex.stackexchange.com/questions/154751/biblatex-with-biber-configuring-my-editor-to-avoid-undefined-citations/154763#154763)
+% 3 XeLaTex
+% 4 XeLateX
+% 5 ViewPDF
+
+\author{José Doroteo Arango Arámbula} % Again, no utf8 I do not know why
+\title{Tarea 1}
+% Si por alguna razón la fecha que desaes que aparezca no es la de hoy
+% \usepackage{datetime}
+% \newdate{date}{06}{09}{2012}
+% \date{\displaydate{date}}
+\date{\today}
+
+% Configuracion del entorno minted para poner código fuente
+\DeclareCaptionFormat{mitedFormat}{%
+    \textbf{#1#2}#3}
+\DeclareCaptionStyle{minetdStyle}{skip=0cm,width=.85\textwidth,justification=centering,
+  font=footnotesize,singlelinecheck=off,format=mitedFormat,labelsep=space}
+\newenvironment{mintedCode}{\captionsetup{type=listing,style=minetdStyle}}{}
+
+\usepackage{dirtytalk} %For using qutation marks (usa comillas in spanish)
+
+% Cambia el nombre de la etiqueta. Afecta a todos los codigos minted del codumento
+\SetupFloatingEnvironment{listing}{name=Código}
+% Opciones de minted para el lenguaje C++
+\setminted[cpp]{frame=lines,framesep=0.25cm,baselinestretch=1,fontsize=\scriptsize,breaklines}
+% Cuando lo hagas dentro de un parrafo el tamaño de fuente debe ser normal
+\setmintedinline[cpp]{fontsize=auto}
+
+\usepackage{csquotes} % Por que si no esta presnte AQUI polyglosia tira un warning
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy} %Para que los fancy headers esten desde la primera página
+% El cuerpo de la tarea esta en este otro archivo
+\input{cuerpo}
+% Añade una entrada a las referencias, aun cuando no esta citado explícitamente
+\nocite{Ross2012}
+% Añade la bibliografía
+\printbibliography
+\end{document}
