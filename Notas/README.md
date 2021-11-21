@@ -2,15 +2,15 @@
 
 Esta plantilla sirve para un documento con notas de clase. Puedes ver el [pdf](notas.pdf) para ver un ejemplo del resultado.
 
-La idea es que uses esta plantilla para tomar notas de una clase. Ya seas un alumno pasando en limpio tu apuntes para estudiar, o el profesor preparando tu clase.
+Ya seas un alumno pasando en limpio tu apuntes para estudiar, o el profesor preparando tu clase; la idea es que uses esta plantilla para tomar tus notas.
 
 * La portada es sencilla y tiene el indice
-* Usa el modo de página sencilla (probablemente le pongas un clip o una grapa en vez de engargolar) o quizas nunca la imprimas en papel
+* Usa el modo de página sencilla,  por que probablemente le pongas un clip o una grapa en vez de engargolar, o quizas nunca la imprimas en papel
 * Maximiza el espacio usando márgenes muy pequeños
-* En los márgenes hay datos básicos (Nombre, titulo, email, número de página). Quizas un dia te pidan una página de tus notas y quieres que al menos sepan que tu eres el autor.
+* En los márgenes hay datos básicos (Nombre, titulo, email, número de página). Quizas un dia te pidan una página de tus notas y quieres que al menos sepan que tu eres el autor
 * La bibliografía se imprime en la última página
 
-Sin embargo, la plantilla incluye ejemplo de uso de todos los casos típicos que se me ocurrieron:
+Además, la plantilla incluye ejemplo de uso de todos los casos típicos que se me ocurrieron:
 
 * Insertar ecuaciones de todo tipo.
 * Poner links, hacer citas y referencias (a otros elementos del texto).

@@ -10,7 +10,7 @@ La idea es que uses esta plantilla para hacer las típicas tareas que contienen 
 * En los márgenes hay datos básicos (Nombre, email, profesor, grupo, número de página)
 * La bibliografía se imprime al final del último ejercicio ocupando el mínimo espacio posible
 
-Sin embargo, la plantilla incluye ejemplo de uso de todos los casos típicos que se me ocurrieron:
+Además, la plantilla incluye ejemplo de uso de todos los casos típicos que se me ocurrieron:
 
 * Insertar ecuaciones de todo tipo.
 * Poner links, hacer citas y referencias (a otros elementos del texto).
