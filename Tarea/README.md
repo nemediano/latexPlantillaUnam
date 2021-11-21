@@ -35,5 +35,5 @@ La primera vez, para compilar desde cero, se puede hacer:
 1. Ejecutar Biber
 1. Ejecutar XeLaTeX
 1. Ejecutar XeLaTeX
-1. Ver el pdf\usepackage{minted} %Para insertar código fuente en algún lenguaje de programación
+1. Ver el pdf
 

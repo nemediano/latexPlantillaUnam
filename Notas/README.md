@@ -17,7 +17,7 @@ Además, la plantilla incluye ejemplo de uso de todos los casos típicos que se 
 * Usar figuras y subfiguras
 * Incluir pseudo código y código fuente (incluso para incluirlo desde un archivo externo)
 
-La plantilla está primordialmente implementada en el archivo `notas.tex`, que también contiene el preámbulo. Desde `notas.tex` se incluyen los archivos `seccion*.tex` que son los que propiamente contiene el contenido de las notas.
+La plantilla está primordialmente implementada en el archivo `notas.tex`, que también contiene el preámbulo. Desde `notas.tex` se incluyen los archivos `seccion*.tex` que son los que propiamente contienen el contenido de las notas.
 
 En el directorio `img`, se incluyen las imágenes o figuras. También hay un directorio `src` que incluye código fuente en lenguaje C++. Este sirve como ejemplo de uso del paquete [minted](https://ctan.org/pkg/minted), para incluir código directamente de un archivo fuente y es solo un ejemplo.
 
@@ -35,5 +35,5 @@ La primera vez, para compilar desde cero, se puede hacer:
 1. Ejecutar Biber
 1. Ejecutar XeLaTeX
 1. Ejecutar XeLaTeX
-1. Ver el pdf\usepackage{minted} %Para insertar código fuente en algún lenguaje de programación
+1. Ver el pdf
 
