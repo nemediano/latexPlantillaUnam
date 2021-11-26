@@ -6,6 +6,10 @@
 \setotherlanguage[variant=american]{english}
 \usepackage{amssymb} % Los simbolos el los conjuntos numéricos
 
+% Poner los links en azul
+\definecolor{links}{HTML}{04A3C6}
+\hypersetup{colorlinks,linkcolor=,urlcolor=links}
+
 \usepackage{graphicx} % Incluir imágenes
 \usepackage{subcaption} % Poder usar subfiguras
 
@@ -14,6 +18,34 @@
 
 % Para usar varias columnas
 \usepackage{multicol}
+
+% Para poner algortmos en pseudo código
+\usepackage{algpseudocode}
+\usepackage{algorithm} %Ambiente flotante para los algoritmos
+% \makeatletter
+% \renewcommand{\ALG@beginalgorithmic}{\small}
+% \makeatother
+
+
+\usepackage[newfloat=true]{minted} %Para insertar código fuente en algún lenguaje de programación
+% Requiere que comiples usando:
+% $xelatex -shell-escape input.tex
+
+% Configuracion del entorno minted para poner código fuente
+\DeclareCaptionFormat{mitedFormat}{%
+    \textbf{#1#2}#3}
+\DeclareCaptionStyle{minetdStyle}{skip=0cm,width=.85\textwidth,justification=centering,
+  font=footnotesize,singlelinecheck=off,format=mitedFormat,labelsep=space}
+\newenvironment{mintedCode}{\captionsetup{type=listing,style=minetdStyle}}{}
+
+\usepackage{dirtytalk} %For using qutation marks (usa comillas in spanish)
+
+% Cambia el nombre de la etiqueta. Afecta a todos los codigos minted del codumento
+\SetupFloatingEnvironment{listing}{name=Código}
+% Opciones de minted para el lenguaje C++
+\setminted[cpp]{frame=lines,framesep=0.25cm,baselinestretch=1,fontsize=\scriptsize,breaklines}
+% Cuando lo hagas dentro de un parrafo el tamaño de fuente debe ser normal
+\setmintedinline[cpp]{fontsize=auto}
 
 \usetheme{default}
 
@@ -54,6 +86,7 @@
 \date[CONSOL 2021] % (optional)
 {Congreso Nacional de Software Libre, Abril 2021}
 
+
 \begin{document}
 
 % Primer slide contiene el título
@@ -93,7 +126,7 @@
 %     \example{Este es un texto de ejemplo} \emph{¡Este es un texto con enfasis!}
  \end{frame}
 
-\section{Formato basico} 
+\subsection{Formato basico} 
 \begin{frame}
 \frametitle{Usando columnas}
 \begin{columns}
@@ -129,7 +162,7 @@
   \end{itemize}
 \end{frame}
 
-\section{Añadir elementos}
+\subsection{Añadir elementos}
 \begin{frame}
 \frametitle{Una imagen desde un archivo}
 \begin{figure}[htb]
@@ -164,6 +197,7 @@ El caption y el resto del texto tienen la misma fuente
 Este es un ejemplo de una tabla muy elegante.
 Hace uso del paquete \href{https://ctan.org/pkg/booktabs}{booktabs} por que las tablas predeterminadas en \LaTeX se ven muy anticuadas.
 Debes de consultar este \href{https://jdhao.github.io/2019/08/27/latex_table_with_booktabs/}{post} y leer esta \href{https://people.inf.ethz.ch/markusp/teaching/guides/guide-tables.pdf}{presentacion} si vas a usar muchas tablas.
+Este ejemplo también demuestra como poner \say{comillas} en \LaTeX{}
 \begin{table}[htb]
   \begin{center}
     \begin{tabular}{l | r r r r r}
@@ -219,6 +253,54 @@ P\left(X \leq 3 \right) &= \int_{0}^{3} \frac{1}{25} y \,\mathrm{d}y \\
      &= \frac{1}{25} \left( \frac{1}{2} \, 9 - \frac{1}{2} \, 0 \right) =
      \frac{1}{25} \cdot \frac{9}{2} = \frac{9}{50} \approx 0.18 
 \end{align*}
+\end{frame}
+
+\subsection{Ciencias de la computación}
+\begin{frame}
+\frametitle{Incluyendo un algoritmo}
+\begin{algorithm}[H]
+\caption{Algoritmo de Euclides}
+\label{alg:euclid}
+\begin{algorithmic}[1] % El número le dice al entrono desde que numero empezar a contar. Si le pones 0 omite los números
+    \Procedure{Euclid}{$a,b$} \Comment{El g.c.d. de $a$ y $b$}
+    \State $r\gets a \bmod b$
+    \While{$r\not=0$} \Comment{Si $r = 0$ ya tenemos la respuesta}
+        \State $a \gets b$
+        \State $b \gets r$
+        \State $r \gets a \bmod b$
+    \EndWhile\label{euclidendwhile}
+    \State \textbf{return} $b$\Comment{$gcd = b$}
+    \EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\end{frame}
+
+\begin{frame}[fragile] % Usar minted requiere que uses opcion fragile
+\frametitle{Incluyendo código fuente}
+\begin{listing}
+\begin{minted}{cpp}
+int main() {
+  printf("hello, world");
+  return 0;
+}
+\end{minted}
+\caption{Un programa de ejemplo en C}\label{lst:hello}
+\end{listing}
+
+Este es otro ejemplo de cómo incluir Python dentro de un párrafo: \mintinline{python}{print(x**2)}.
+
+\end{frame}
+
+\begin{frame}[fragile] % Usar minted requiere que uses opcion fragile
+\frametitle{Incluyendo código fuente desde un archivo}
+\begin{listing}
+\inputminted[
+  firstline=54, %If you omit this two fields, the whole file is pulled
+  lastline=68
+  ]{cpp}{src/GccTest.cpp}
+  \caption{Una implementación defectuosa de insertion sort}\label{lst:example}
+\end{listing}
 \end{frame}
 
 \end{document}
