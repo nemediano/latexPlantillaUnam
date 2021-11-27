@@ -31,13 +31,11 @@
      \end{enumerate}
 % 
      \vspace{0.2cm}
-% 
-%     \example{Este es un texto de ejemplo} \emph{¡Este es un texto con enfasis!}
+
  \end{frame}
 
 \subsection{Formato basico} 
-\begin{frame}
-\frametitle{Usando columnas}
+\begin{frame}{Usando columnas}
 \begin{columns}
 \column[t]{0.5\textwidth}
      Esta es la primer columna
@@ -56,8 +54,7 @@
 \end{columns}
 \end{frame}
 
-\begin{frame}
-\frametitle{Tipos de texto}
+\begin{frame}{Tipos de texto}
   \begin{itemize}
     \item En negritas (bf):  \textbf{Texto de ejemplo}
     \item En italicas (it) \textit{Texto de ejemplo}
@@ -72,57 +69,53 @@
 \end{frame}
 
 \subsection{Añadir elementos}
-\begin{frame}
-\frametitle{Una imagen desde un archivo}
+\begin{frame}{Una imagen desde un archivo}
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=0.55\textwidth]{img/normal}
+  \includegraphics[width=0.45\textwidth]{img/normal}
 \caption[Distribución normal]{Gráfica de una distribución normal. Fue creado usando el siguiente \href{https://www.statmethods.net/advgraphs/probability.html}{script en R}.}
 \end{figure}
 El caption y el resto del texto tienen la misma fuente
 \end{frame}
 
-\begin{frame}
-\frametitle{Varias imagenes usando subfiguras}
+\begin{frame}{Varias imagenes usando subfiguras}
 \begin{figure}[htp]
  \centering
- \begin{subfigure}[b]{0.25\textwidth}
+ \begin{subfigure}[b]{0.2\textwidth}
    \includegraphics[width=\textwidth]{img/ambiente}
-   \caption{Reflexión ambiental.}
+   \caption{Ambiental.}
  \label{fig:2a}
  \end{subfigure}
 ~
- \begin{subfigure}[b]{0.25\textwidth}
+ \begin{subfigure}[b]{0.2\textwidth}
    \includegraphics[width=\textwidth]{img/especular}
-   \caption{Reflexión especular.}
+   \caption{Especular.}
    \label{fig:2b}
  \end{subfigure}
 \\
- \begin{subfigure}[b]{0.25\textwidth}
+ \begin{subfigure}[b]{0.2\textwidth}
    \includegraphics[width=\textwidth]{img/difuso}
-   \caption{Reflexión difusa.}
+   \caption{Difusa.}
    \label{fig:2c}
  \end{subfigure}
 ~
- \begin{subfigure}[b]{0.25\textwidth}
+ \begin{subfigure}[b]{0.2\textwidth}
    \includegraphics[width=\textwidth]{img/completo}
    \caption{Modelo completo.}
    \label{fig:2d}
  \end{subfigure}
-    
   \caption{Componentes del módelo de iluminación de Phong.}
   \label{fig:two}
 \end{figure}
 \end{frame}
 
-\begin{frame}
-\frametitle{Figura usando columnas}
+\begin{frame}{Figura usando columnas}
 \begin{columns}
 \column[t]{0.5\textwidth}
  \begin{figure}[htb]
   \centering
-  \includegraphics[width=\textwidth]{img/normal}
-\caption{Gráfica de una distribución normal. Fue creado usando el siguiente \href{https://www.statmethods.net/advgraphs/probability.html}{script en R}.}
+  \includegraphics[width=0.7\textwidth]{img/normal}
+\caption{Gráfica de una distribución normal.}
 \end{figure}    
 \column[t]{0.5\textwidth}
      Texto para describir la imagen
@@ -134,8 +127,7 @@ El caption y el resto del texto tienen la misma fuente
 \end{columns}
 \end{frame}
 
-\begin{frame}
-\frametitle{Incluir tablas}
+\begin{frame}{Incluir tablas}
 Este es un ejemplo de una tabla muy elegante.
 Hace uso del paquete \href{https://ctan.org/pkg/booktabs}{booktabs} por que las tablas predeterminadas en \LaTeX se ven muy anticuadas.
 Debes de consultar este \href{https://jdhao.github.io/2019/08/27/latex_table_with_booktabs/}{post} y leer esta \href{https://people.inf.ethz.ch/markusp/teaching/guides/guide-tables.pdf}{presentacion} si vas a usar muchas tablas.
@@ -158,8 +150,10 @@ Este ejemplo también demuestra como poner \say{comillas} en \LaTeX{}
 \end{frame}
 
 \section{Entornos de bloque}
-\begin{frame}
-\frametitle{Los entornos de bloque}
+\begin{frame}{Los entornos de bloque}
+En esta diapositiva, el siguiente texto esta
+\alert{resaltado} por que es importante.
+Favor de no abusar.
     % Blocks styles
     \begin{block}{Bloque generico}
         Texto dentro del bloque.
@@ -175,8 +169,7 @@ Este ejemplo también demuestra como poner \say{comillas} en \LaTeX{}
 \end{frame}
 
 \section{Matemáticas}
-\begin{frame}
-\frametitle{Incluyendo matemáticas simples}
+\begin{frame}{Incluyendo matemáticas simples}
  \begin{equation}
  \label{eq:elipse}
  \frac{x^{2}}{a^{2}} + \frac{y^{2}}{b^{2}} = 1
@@ -185,8 +178,7 @@ Este ejemplo también demuestra como poner \say{comillas} en \LaTeX{}
   También se pueden insertar ecuaciones dentro de un párrafo, por ejemplo: $\forall x \in \mathbb{R}$.
 \end{frame}
 
-\begin{frame}
-\frametitle{Resolviendo una integral}
+\begin{frame}{Resolviendo una integral}
 Un ejemplo de cómo escribir una serie de pasos matemáticos usando el entorno: \texttt{align}.
 Poner $*$ dentro del entorno te permite omitir los números
 \begin{align*}
@@ -198,15 +190,15 @@ P\left(X \leq 3 \right) &= \int_{0}^{3} \frac{1}{25} y \,\mathrm{d}y \\
 \end{frame}
 
 \subsection{Ciencias de la computación}
-\begin{frame}
-\frametitle{Incluyendo un algoritmo}
+\begin{frame}{Incluyendo un algoritmo}
 \begin{algorithm}[H]
-\caption{Algoritmo de Euclides}
+\renewcommand{\thealgorithm}{} % Remove the algorthm number in the caption
+\caption{de Euclides}
 \label{alg:euclid}
 \begin{algorithmic}[1] % El número le dice al entrono desde que numero empezar a contar. Si le pones 0 omite los números
     \Procedure{Euclid}{$a,b$} \Comment{El g.c.d. de $a$ y $b$}
     \State $r\gets a \bmod b$
-    \While{$r\not=0$} \Comment{Si $r = 0$ ya tenemos la respuesta}
+    \While{$r\not=0$} \Comment{Si $r = 0$, ya tenemos la respuesta}
         \State $a \gets b$
         \State $b \gets r$
         \State $r \gets a \bmod b$

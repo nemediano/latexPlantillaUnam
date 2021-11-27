@@ -1,6 +1,7 @@
 %\documentclass{beamer}
 % Aspect ratio
-\documentclass[aspectratio=169]{beamer}
+\documentclass[aspectratio=169,11pt]{beamer}
+% Aspect ratio:
 % 610 => 16:10 
 % 169 => 16:9
 % 149 => 14:9
@@ -8,19 +9,23 @@
 %  43 => 4:3 Default
 %  32 => 3:2
 
+% Font size
+% 8pt, 9pt, 10pt, 11pt (default), 12pt, 14pt, 17pt, 20pt
+
+%\usefonttheme{default}
+% structurebold
+% structurebolditalic
+% structuresmallcapsserif
+% structureitalicsserif
+% serif
+% default. 
+
 % Opciones de lenguaje usando polyglossia (defino dos para este documento)
 \usepackage{polyglossia}
 \setmainlanguage{spanish}
 \setotherlanguage[variant=american]{english}
 \usepackage{amssymb} % Los simbolos el los conjuntos numéricos
 
-% Definicion de colores especiales
-\definecolor{light_blue}{RGB}{4, 163, 198}
-\definecolor{azul_unam}{RGB}{0, 43, 122}
-\definecolor{dorado_unam}{RGB}{187, 136, 0}
-% Pongo linkcolor vacio para que los links internos no tengan color
-% Solo los links externos tienen color
-\hypersetup{colorlinks,linkcolor=,urlcolor=light_blue}
 
 \usepackage{graphicx} % Incluir imágenes
 \usepackage{subcaption} % Poder usar subfiguras
@@ -34,10 +39,13 @@
 % Para poner algortmos en pseudo código
 \usepackage{algpseudocode}
 \usepackage{algorithm} %Ambiente flotante para los algoritmos
-% \makeatletter
-% \renewcommand{\ALG@beginalgorithmic}{\small}
-% \makeatother
-
+%Make the comments similar to cpp
+%\algrenewcommand{\algorithmiccomment}[1]{\hskip3em$//$ #1}
+%El paquete algorithm, no tiene traduccion automatica
+\floatname{algorithm}{Algoritmo}
+\renewcommand{\algorithmicrequire}{\textbf{Entradas:}}
+\renewcommand{\algorithmicensure}{\textbf{Salidas:}}
+\renewcommand{\listalgorithmname}{Índice de algoritmos}
 
 \usepackage[newfloat=true]{minted} %Para insertar código fuente en algún lenguaje de programación
 % Requiere que comiples usando:
@@ -81,17 +89,45 @@
 \institute[FES Acatlán]{
 %     email for contact
     \normalsize{\email{panchovilla@unam.mx}}
-    \newline
-    \newline
 %    university name
-    \unam
+%    \unam
 }
 \date[CONSOL 2021] % (optional)
 {Congreso Nacional de Software Libre, Abril 2021}
-\titlegraphic{\includegraphics[width=1cm]{img/escudo-a}}
+\titlegraphic{\includegraphics[width=1.7cm]{img/escudo-a}}
 
 % Logo appears in all slides not only title
 %\logo{\includegraphics[height=1cm]{img/escudo-a}}
+
+\usetheme{AnnArbor}
+\useinnertheme{circles}
+\usecolortheme{orchid}
+% El tema Annharbor no usa comando de alerta. Los redefinimos
+\setbeamercolor{block title alerted}{fg=white,bg=red}
+\setbeamercolor{alerted text}{fg=red}
+
+%\useinnertheme[⟨options⟩]{⟨name⟩}
+
+% Definicion de colores especiales
+\definecolor{light_blue}{RGB}{4, 163, 198}
+\definecolor{azul_unam}{RGB}{0, 43, 122}
+\definecolor{dorado_unam}{RGB}{187, 136, 0}
+\definecolor{amarillo_quemado}{RGB}{212, 180, 21}
+
+\setbeamercolor{frametitle}{fg=black,bg=amarillo_quemado}
+\setbeamercolor{title}{fg=azul_unam,bg=dorado_unam}
+\setbeamercolor{title in head/foot}{fg=black,bg=amarillo_quemado}
+\setbeamercolor{subsection in head/foot}{fg=azul_unam,bg=dorado_unam}
+\setbeamercolor{section in head/foot}{fg=dorado_unam}
+\setbeamercolor{author in head/foot}{fg=dorado_unam}
+\setbeamercolor{institute in head/foot}{fg=dorado_unam}
+\setbeamercolor{page number in head/foot}{fg=azul_unam,bg=dorado_unam}
+\setbeamercolor{date in head/foot}{fg=azul_unam,bg=dorado_unam}
+
+% Pongo linkcolor vacio para que los links internos no tengan color
+% Solo los links externos tienen color
+\hypersetup{colorlinks,linkcolor=,urlcolor=azul_unam}
+
 
 \begin{document}
 
