@@ -1,0 +1,176 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Professional CV
+% LaTeX Template
+% Version 2.0 (8/5/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Trey Hunner (http://www.treyhunner.com/)
+%
+% Important note:
+% This template requires the resume.cls file to be in the same directory as the
+% .tex file. The resume.cls file provides the resume style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{resume} % Use the custom resume.cls style
+
+% custom links and pdf metadata
+\usepackage[
+  final,
+  unicode,
+  colorlinks=true,
+  citecolor=black,
+  linkcolor=black,
+  urlcolor=black,
+  plainpages=false,
+  urlcolor=black,
+  pdfpagelabels=true,
+  pdfsubject={Curriculum de Pancho Villa},
+  pdfauthor={José Doroteo Arango Arámbula},
+  pdftitle={Curriculum vitae - Pancho Villa},    % title
+  pdfkeywords={Curriculum vitae, Ciencias de la Computación, Doctorado, Graficación por Computadora}, % list of keywords
+]{hyperref}
+
+\usepackage[letterpaper,left=1cm,top=1.5cm,right=1cm,bottom=1cm]{geometry} % Document margins
+
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\name{José Doroteo Arango Arámbula} % Your name
+\address{Avenida Alcanfores y San Juan, Totoltepec s/n \\ Sta Cruz Acatlán, 53150} % Your address
+\address{\href{http://www.linkedin.com/in/panchovilla}{http://www.linkedin.com/in/panchovilla}} % Dirección secundaria
+\address{+52 55 5623 1715 \\ \href{mailto:panchovilla@gmail.com}{panchovilla@gmail.com}} % Teléfono y correo electronico
+
+\usepackage{fancyhdr}
+\showboxdepth=5
+\showboxbreadth=5
+
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{Villa, Pancho pag.\thepage}
+\cfoot{} % get rid of the page number 
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\begin{document}
+\thispagestyle{empty}
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Educación}
+
+{\bf \href{http://www.purdue.edu}{UNIVERSIDAD DE PURDUE}} \hfill {\em West Lafayette, Indiana, EUA} 
+\\ \href{http://polytechnic.purdue.edu/degrees/phd-technology}{{\bf Doctorado} en Tecnología} \hfill {\em Agosto 2017}
+\\ \href{http://polytechnic.purdue.edu}{Instituto Politécnico de Purdue}, \href{http://polytechnic.purdue.edu/departments/computer-graphics-technology}{Departamento de Graficación por Computadora} \hfill {\em Promedio: 3.79/4.0}
+\\ Áreas de Investigación: Manufactura aditiva (Impresión 3D) y Graficación por Computadora
+
+{\bf \href{http://www.unam.mx}{UNIVERSIDAD NACIONAL AUTÓNOMA DE MÉXICO}} \hfill {\em CDMX} 
+\\ \href{http://www.mcc.unam.mx}{{\bf Maestría} en Ciencias de la Computación} \hfill {\em Septiembre 2011}
+\\ \href{https://www.iimas.unam.mx}{Instituto de Investigación en Matemáticas Aplicadas y Sistemas} \hfill {\em Promedio: 9.4/10.0}
+\\ Areas de estudio: Procesamiento de Imágenes Digitales y Graficación por Computadora
+
+\href{http://www.mac.acatlan.unam.mx}{{\bf Licenciatura} en Matemáticas Aplicadas y Computación} \hfill {\em Mayo 2008}
+\\ \href{https://www.acatlan.unam.mx}{Facultad de Estudio Superiores de Acatlán} \hfill {\em Promedio: 8.6/10.0}
+
+
+\end{rSection}
+%----------------------------------------------------------------------------------------
+%	TECHNICAL STRENGTHS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Conocimientos en Computación}
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{2ex}} l }
+Lenguajes de programación &  \textbf{Avan:} C/C++, GLSL. \textbf{Med:} Matlab, JavaScript. \textbf{Prin:} Python, R\\
+APIs / Frameworks & OpenGL, Qt, ASP.NET MVC, CUDA\\
+Herramientas de desarrollo &  SVN, Git, \LaTeX, bash, phpESP, Wordpress\\
+Paquetería & Visual Studio, Eclipse, Gimp, Inkscape
+\end{tabular}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Experiencia en la industria}
+
+\begin{rSubsection}{\href{http://about.google/}{Google LLC}}{Mountain View, California, EUA}{Software Engineer, Equipo de Google Cloud}{Marzo 2020 - presente}
+\item Miembro del equipo de tecnología avanzada en \href{http://stadia.google.com/}{Stadia}.
+\end{rSubsection}
+
+\begin{rSubsection}{\href{http://www.nvidia.com}{Nvidia Corporation}}{Santa Clara, California, EUA}{Senior Software Engineer, Equipo 3D para dispositivos móviles}{Agosto 2017 - Feb 2021}
+\item Contribuí en la certificación de seguridad de una biblioteca (MISRA y CERT C) siguiendo la metodología PLC
+\item Realicé dos apps de realidad aumentada para comparar ARCore y ARKit en teléfonos usando Unreal Engine
+\end{rSubsection}
+
+\begin{rSubsection}{\href{http://www.adobe.com/}{Adobe Systems Incorporated}}{San Francisco, California, EUA}{Becario de investigación, \href{http://research.adobe.com/}{Equipo de Imágenes Procedurales}}{Mayo 2016 - Agosto 2016}
+\item Diseñé un motor gráfico de \emph{rendering} diferido para una aplicación para escultura interactiva
+\item Implementé varios algoritmos: \emph{shadow mapping}, \emph{global ambient occlusion} y \emph{PBR shading}, usando GLSL shaders
+\end{rSubsection}
+
+\begin{rSubsection}{\href{http://www.nvidia.com}{Nvidia Corporation}}{Santa Clara, California, EUA}{Becario en desarrollo de Software, Equipo del driver de OpenGL}{Mayo 2015 - Agosto 2015}
+\item Porté extensiones de OpenGL para exponerlas en el API público.
+\item Entable comunicación con ingenieros de diversas partes del mundo para detallar reportes de bugs
+\end{rSubsection}
+
+\begin{rSubsection}{Nvidia Corporation}{Santa Clara, California, EUA}{Becario en desarrollo de Software, Equipo del driver de DirectX}{Mayo 2014 - Agosto 2014}
+\item Cree un conversor de formato de imágenes digitales, usando el lenguaje ensamblador propietario de Nvidia
+\item Escribí varios shaders en HLSL para un conversor de formatos de vídeo
+\end{rSubsection}
+
+\end{rSection}
+
+\clearpage
+
+
+
+\begin{rSection}{Experiencia en ámbito académico}
+
+	\begin{rSubsection}{\href{http://www.purdue.edu}{Universidad de Purdue}}{West Lafayette, Indiana, EUA}{Ayudante de profesor, Depto de Gráficas por Computadora}{Agosto 2015 - Mayo 2016, Agosto 2016 - Mayo 2017}
+	\item Cree materiales didácticos para la clase de programación: \href{https://polytechnic.purdue.edu/sites/default/files/CGT-fall-2017.pdf}{CGT215}
+	\item Supervisé estudiantes durante sesiones de laboratorio de clases de programación
+	\item Califique material y administré las calificaciones para más de 50 estudiantes usando Blackboard
+	\end{rSubsection}
+
+	\begin{rSubsection}{\href{http://www.purdue.edu}{Universidad de Purdue}}{West Lafayette, Indiana, EUA}{Asistente de investigación, \href{http://hpcg.purdue.edu/}{Laboratorio HPCG}}{Agosto 2012 - Mayo 2014, Agosto 2014 - Mayo 2015}
+	\item Cree una visualización 3D de las microestructuras internas de las baterías usando OpenGL y CUDA
+	\item Desarrolle un algoritmo de optimización de empacado 3D
+	\item Contribuí en el desarrollo de software para el análisis de redes carreteras usando teoría de grafos
+	\end{rSubsection}
+	
+	\begin{rSubsection}{\href{http://www.unam.mx}{Universidad Nacional Autónoma de México}}{CDMX, México}{Asistente de investigación, \href{https://turing.iimas.unam.mx/}{Depto. de Ciencias de la Computación}, \href{https://www.iimas.unam.mx/}{IIMAS}}{Octubre 2011 - Enero 2012}
+	\item Desarrollé programas de análisis de imágenes digitales para la reconstrucción 3D de venas en la retina
+	\item Opere una \emph{cámara fundus} para capturar imágenes de la retina
+	\item Cree un pipeline de varios scripts en Bash para automatizar el procesamiento de imágenes
+	\end{rSubsection}
+	
+	\begin{rSubsection}{\href{http://www.unam.mx}{Universidad Nacional Autónoma de México}}{Edo de México, México}{Profesor, \href{http://www.mac.acatlan.unam.mx}{Jefatura de MAC}, \href{https://www.acatlan.unam.mx}{FES Acatlán}} {Agosto 2008 - Mayo 2012}
+	\item Impartí dos clases: \href{https://www.acatlan.unam.mx/files/PlanesDeEstudio/MAC/4/Teoria_de_Graficas.pdf}{Teoría de Grafos} y \href{https://www.acatlan.unam.mx/files/PlanesDeEstudio/MAC/7/Graficacion_por_Computadora.pdf}{Graficación por Computadora}
+	\item Cree materiales didácticos: diapositivas, exámenes y notas
+	\item Dí mentoría a alumnos en horas extracurriculares
+	\end{rSubsection}
+	
+	\begin{rSubsection}{\href{http://www.unam.mx}{Universidad Nacional Autónoma de México}}{CDMX, México}{\href{http://www.fciencias.unam.mx/directorio/63922}{Ayudante de profesor}, \href{http://www.fciencias.unam.mx/}{Facultad de Ciencias}}{Enero 2009 - Diciembre 2010}
+	\item Colaboré en dos clases nivel licenciatura: \href{http://www.fciencias.unam.mx/licenciatura/asignaturas/217/249}{Geometría Moderna} e \href{http://www.fciencias.unam.mx/licenciatura/asignaturas/2017/1236}{Introducción a las Ciencias de la Computación}
+	\item Cree material didáctico, programas de demostración, exámenes y diapositivas
+	\item Guié a estudiantes en la instalación de software y aprender buenas prácticas de programación
+	\end{rSubsection}
+
+\end{rSection}
+
+\begin{rSection}{Publicaciones} \itemsep 1pt
+\item \textit{\href{http://www.sciencedirect.com/science/article/pii}{Improving troops orientation for avoiding ambush in scarse battles}}, { \bf Arango D.} y Zapata E. Active Guerrila Journal, July 2018.
+\item \textit{\href{http://dl.acm.org/doi/abs/10.1145/}{Learning Fast artillery charges}}, Zapata E, { \bf Arango D.}., y Ángeles, F. Proceedings of the 32Nd Spring Conference on Revolutions, 2016.
+\end{rSection}
+
+\end{document}
