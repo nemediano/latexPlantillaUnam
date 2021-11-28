@@ -2,7 +2,23 @@
 
 Este repositorio contiene diversas plantillas en LaTeX que he creado durante mi vida de estudiante y académico de la [UNAM](https://www.unam.mx/).
 
-Cada plantilla está pensada para una situación diferente, pero todas ellas contienen ejemplos para hacer cosas parecidas.
+Cada plantilla está pensada para una situación diferente, pero todas ellas contienen ejemplos para hacer todo lo pertinente en cada caso.
+
+## Documentos Academicos
+* [Tesis](Tesis/): Para poder hacer una tesis de grado.
+* [TrabajoFinal](TrabajoFinal/): Para hacer un trabajo importante en alguna materia.
+* [Tarea](Tarea/): Plantilla simple, que maximiza el espacio. Ideal para una tarea de esas que se entregan cada clase.
+* [Notas](Notas/): Para las notas personales de estudio o notas de un profesor que prepara su clase.
+* [Examen](): Para que un profesor elabore los enunciados de una tarea o un examen.
+
+## Presentaciones
+* [Conferencia](Conferencia/): Presentación de beamer para presentar en un evento o exposición de un alumno en clase.
+* [Clase](Clase/) Presentación de beamer para apoyarte al dar clase.
+
+## Documentos
+* [CartaRecomendacion](CartaRecomendacion/): Un carta de tipo formal y oficial.
+* [Curriculum](Curriculum/): Un curriculum en una sola hoja para alguien con poca experiencia.
+* [CurriculumPosgrado](CurriculumPosgrado/): Un curriculum en dos hojas para un profesor o alguien con mucha experiencia.
 
 Dado mi formación particular, he puesto especial énfasis en Matemáticas, y Ciencias de la Computación. Sin embargo, trate de ser lo más general para abarcar todos los usos posibles que se me puedan ocurrir. Por esto último, en realidad es un repositorio que contiene plantillas en LaTeX para uso academico, se puede adpatar para cualquier universidad con cambios minimos.
 
