@@ -1,0 +1,52 @@
+%%%%Draft version
+% \documentclass[12pt,letterpaper,spanish,draft,oneside]{book}
+%%%%Final version
+\documentclass[12pt,letterpaper,spanish,oneside,final]{book}
+
+\usepackage{Trabajo}
+% New bibliography system: biber (No bibtex needed)
+\usepackage[
+  backend=biber
+]{biblatex}
+\addbibresource{bibliografia.bib}
+
+%%%%For producing modified TOC with less space inbetween.
+\usepackage{tocloft}
+\setlength\cftparskip{-2pt}
+\setlength\cftbeforesecskip{1pt}
+\setlength\cftaftertoctitleskip{2pt}
+
+%\includeonly{dedicatoria} %Por debug solo compila un capitulo
+
+\begin{document}
+
+\selectlanguage{spanish}
+
+
+\input{portada}
+
+%%%%For changing the title of table of contents
+%\renewcommand*\contentsname{}
+\tableofcontents
+
+%%%%Change numbering to arabic
+
+\input{introduccion}
+
+\input{capitulo1}
+ 
+\input{capitulo2}
+
+\input{capitulo3}
+
+\input{conclusiones}
+
+% If you want to change the bibliography style
+%\bibliographystyle{ieee_esp}
+\nocite{*}
+
+\printbibliography
+
+\addcontentsline{toc}{chapter}{\bibname}
+
+\end{document}

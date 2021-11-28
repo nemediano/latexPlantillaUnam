@@ -1,0 +1,45 @@
+\chapter{Un poco de Matemáticas}
+\label{chap:mate}
+Sólo para probar el siguiente texto está en inglés: \textenglish{In god we thrust}.
+
+En éste capítulo se presentan varios ejemplos de muchas matemáticas.
+Primero, se puede crear una ecuación simple de la siguiente manera:
+\begin{equation}
+ \label{eq:elipse}
+ \frac{x^{2}}{a^{2}} + \frac{y^{2}}{b^{2}} = 1
+\end{equation}
+Y podemos hacer una referencia a ella en el texto de la siguiente manera: La  ecuación \eqref{eq:elipse} representa una elipse.
+Si no queremos que las ecuaciones esten numeradas podemos hacer:
+\begin{equation}
+ \nonumber
+ \binom{n}{k} = \frac{n!}{k!(n-k)!}
+\end{equation}
+También se pueden insertar ecuaciones dentro de un párrafo, por ejemplo: $\forall x \in \mathbb{R}$.
+Se pueden poner links a un sitio web de la siguiente manera:
+Para aprender acerca de integrales y sumatorias puedes leer el siguiente \href{https://en.wikibooks.org/wiki/LaTeX/Mathematics#Sums_and_integrals}{wikilibro} o puedes buscarlo en \url{www.google.com}.
+Nótese que la segunda forma cambia la fuente del texto.
+ 
+Éste es un ejemplo de una función con casos, como si fuera una \emph{pdf}.
+\begin{equation}
+ \label{eq:pdf}
+ f(y) =
+ \begin{cases}
+   \frac{1}{25} y & \quad \text{si } 0 \leq y < 5 \\
+   \frac{2}{25} - \frac{1}{25} y & \quad \text{si } 5 \leq y < 10 \\
+   0 & \quad \text{si } y < 0 \text{ ó } y > 10
+ \end{cases}
+\end{equation}
+Éste es un ejemplo de paréntesis que ajustan su tamaño automáticamente:
+\begin{equation}
+ \nonumber
+ P\left(A=2\middle|\frac{A^2}{B}>4\right)
+\end{equation}
+Finalmente, pongo un ejemplo de cómo escribir una serie de pasos matemáticos usando el entorno: \verb|align|.
+Poner $*$ dentro del entorno te permite omitir los números
+\begin{align*}
+P\left(X \leq 3 \right) &= \int_{0}^{3} \frac{1}{25} y \,\mathrm{d}y \\
+     &= \left. \frac{1}{25} \cdot \frac{1}{2} \, y^{2} \right|_0^3 \\
+     &= \frac{1}{25} \left( \frac{1}{2} \, 9 - \frac{1}{2} \, 0 \right) =
+     \frac{1}{25} \cdot \frac{9}{2} = \frac{9}{50} \approx 0.18
+\end{align*}
+
