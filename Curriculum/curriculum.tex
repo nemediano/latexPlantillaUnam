@@ -1,0 +1,142 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Professional CV
+% LaTeX Template
+% Version 2.0 (8/5/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Trey Hunner (http://www.treyhunner.com/)
+%
+% Important note:
+% This template requires the resume.cls file to be in the same directory as the
+% .tex file. The resume.cls file provides the resume style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{resume} % Usar el estilo definido en resume.cls
+
+% Links personalizados (en un documento impreso no se ven)
+% y metadatos del pdf, en un curriculum esto es muy importante por que
+% es muy probable que el primer filtro sea un sistema
+
+\usepackage[
+  final,
+  unicode,
+  colorlinks=true,
+  citecolor=black,
+  linkcolor=black,
+  urlcolor=black,
+  plainpages=false,
+  urlcolor=black,
+  pdfpagelabels=true,
+  pdfsubject={Curriculum de Pancho Villa}, % Tema
+  pdfauthor={José Doroteo Arango Arámbula}, % Autor
+  pdftitle={Curriculum vitae - Pancho Villa}, % Titulo
+  pdfkeywords={Curriculum vitae, Licenciado en Matemáticas Aplicadas y Computación, Graficación por Computadora}, % Keywords
+]{hyperref}
+
+\usepackage[letterpaper,left=1cm,top=1.5cm,right=1cm,bottom=1cm]{geometry} % Márgenes del documento
+
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\name{José Doroteo Arango Arámbula} % El nombre
+\address{Avenida Alcanfores y San Juan, Totoltepec s/n \\ Sta Cruz Acatlán, 53150} % Tu dirección
+\address{\href{http://www.linkedin.com/in/panchovilla}{http://www.linkedin.com/in/panchovilla}} % Dirección secundaria
+\address{+52 55 5623 1715 \\ \href{mailto:panchovilla@gmail.com}{panchovilla@gmail.com}} % Teléfono y correo electronico
+
+\usepackage{fancyhdr}
+\showboxdepth=5
+\showboxbreadth=5
+
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+%\rhead{Pancho, Villa pag.\thepage}  %En caso de que te pases de una página
+\cfoot{} % get rid of the page number 
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\begin{document}
+\thispagestyle{empty}
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Educación}
+
+\href{http://www.mac.acatlan.unam.mx}{{\bf Licenciatura} en Matemáticas Aplicadas y Computación} \hfill {\em Mayo 2021}
+\\ \href{https://www.acatlan.unam.mx}{Facultad de Estudio Superiores de Acatlán} \hfill {\em Promedio: 8.5/10.0}
+
+
+\end{rSection}
+%----------------------------------------------------------------------------------------
+%	TECHNICAL STRENGTHS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Conocimientos en Computación}
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{2ex}} l }
+Lenguajes de programación &  \textbf{Avan:} C/C++, GLSL. \textbf{Med:} Matlab, JavaScript. \textbf{Prin:} Python, R\\
+APIs / Frameworks & OpenGL, Qt, ASP.NET MVC, CUDA\\
+Herramientas de desarrollo &  SVN, Git, \LaTeX, bash, phpESP, Wordpress\\
+Paquetería & Visual Studio, Eclipse, Gimp, Inkscape
+\end{tabular}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Experiencia en la industria}
+
+\begin{rSubsection}{\href{http://about.google/}{Google LLC}}{Mountain View, California, EUA}{Software Engineer, Equipo de Google Cloud}{Marzo 2020 - presente}
+\item Contribuí en la certificación de seguridad de una biblioteca (MISRA y CERT C) siguiendo la metodología PLC
+\item Desarrollé varios widgets para web de un framework para robótica (ISAAC SDK)
+\end{rSubsection}
+
+\begin{rSubsection}{Tecnología en Sistemas de Software}{CDMX, México}{Becario, Q.A. y desarrollador}{Enero 2019 - Diciembre 2020}
+\item Desarrollé varias aplicaciones en Java para procesamiento de texto
+\item Ayudé en una migración de una BD de Interbase a Oracle
+\end{rSubsection}
+
+\end{rSection}
+
+% Saltar una página
+%\clearpage
+
+\begin{rSection}{Experiencia en ámbito académico}
+
+	\begin{rSubsection}{\href{http://www.unam.mx}{Universidad Nacional Autónoma de México}}{Edo de México, México}{Profesor, \href{http://www.mac.acatlan.unam.mx}{Jefatura de MAC}, \href{https://www.acatlan.unam.mx}{FES Acatlán}} {Agosto 2019 - Mayo 2020}
+	\item Impartí dos clases: \href{https://www.acatlan.unam.mx/files/PlanesDeEstudio/MAC/4/Teoria_de_Graficas.pdf}{Teoría de Grafos} y \href{https://www.acatlan.unam.mx/files/PlanesDeEstudio/MAC/7/Graficacion_por_Computadora.pdf}{Graficación por Computadora}
+	\item Cree materiales didácticos: diapositivas, exámenes y notas
+	\end{rSubsection}
+	
+	\begin{rSubsection}{\href{http://www.unam.mx}{Universidad Nacional Autónoma de México}}{Edo de México, México}{\href{https://www.acatlan.unam.mx/index.php?id=160}{Servicio Social}, \href{https://kalinga.acatlan.unam.mx/cedetec/}{CEDETEC}}{Enero 2019 - Diciembre 2019}
+	\item Atendí a usuarios desde ventanilla para asignarles equipos en el área de Linux
+	\item Cree material didáctico, programas de demostración, exámenes y diapositivas
+	\end{rSubsection}
+
+\end{rSection}
+
+\begin{rSection}{Otras distinciones} \itemsep -6pt
+\item Miembro del programa de asesorias para alumnos de primer semestre
+\item Miembro del Consejo Técnico de la Facultad, Facultad de Estudios Superiores de Acatlán
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Cursos académicos relevantes e Idiomas}
+\itab{Geometría Computacional } \tab{}  \tab{Visualización científica}
+\\ \itab{Análisis de Imágenes Multiespectrales } \tab{}  \tab{Series de tiempo} 
+\\ \itab{Metaheuristicas para la optimiazación combinatoria } \tab{}  \tab{Procesos estocásticos} 
+\\ \itab{Ingles plan Global } \tab{} \tab{TOEFL iBT 110 pts}
+\end{rSection}
+
+\end{document}
