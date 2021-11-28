@@ -26,13 +26,17 @@
 \setotherlanguage[variant=american]{english}
 \usepackage{amssymb} % Los simbolos el los conjuntos numéricos
 
+% El sistema de bibliografá es Biber (no necesitas BibTeX)
+\usepackage[
+  backend=biber
+]{biblatex}
+\addbibresource{biblio.bib}
 
 \usepackage{graphicx} % Incluir imágenes
 \usepackage{subcaption} % Poder usar subfiguras
 % Para presentaciones usualmente no necestiamos la primer parte del caption
 \captionsetup[figure]{labelformat=empty}
 \captionsetup[table]{labelformat=empty}
-
 % Tablas con estilo profesional
 \usepackage{booktabs}
 
@@ -96,21 +100,17 @@
 %    university name
 %    \unam
 }
-\date[CONSOL 2021] % (optional)
-{Congreso Nacional de Software Libre, Abril 2021}
+\date
+{Teoria de Gráficas, 2021-II}
 \titlegraphic{\includegraphics[width=1.7cm]{img/escudo-a}}
 
 % Logo appears in all slides not only title
 %\logo{\includegraphics[height=1cm]{img/escudo-a}}
 
-\usetheme{AnnArbor}
+\usetheme{Frankfurt}
 \useinnertheme{circles}
 \usecolortheme{orchid}
-% El tema Annharbor no usa comando de alerta. Los redefinimos
-\setbeamercolor{block title alerted}{fg=white,bg=red}
-\setbeamercolor{alerted text}{fg=red}
 
-%\useinnertheme[⟨options⟩]{⟨name⟩}
 
 % Definicion de colores especiales
 \definecolor{light_blue}{RGB}{4, 163, 198}
@@ -118,21 +118,17 @@
 \definecolor{dorado_unam}{RGB}{187, 136, 0}
 \definecolor{amarillo_quemado}{RGB}{212, 180, 21}
 
-\setbeamercolor{frametitle}{fg=black,bg=amarillo_quemado}
 \setbeamercolor{title}{fg=azul_unam,bg=dorado_unam}
-\setbeamercolor{title in head/foot}{fg=black,bg=amarillo_quemado}
-\setbeamercolor{subsection in head/foot}{fg=azul_unam,bg=dorado_unam}
-\setbeamercolor{section in head/foot}{fg=dorado_unam}
-\setbeamercolor{author in head/foot}{fg=dorado_unam}
-\setbeamercolor{institute in head/foot}{fg=dorado_unam}
-\setbeamercolor{page number in head/foot}{fg=azul_unam,bg=dorado_unam}
-\setbeamercolor{date in head/foot}{fg=azul_unam,bg=dorado_unam}
+\setbeamercolor{section in head/foot}{fg=dorado_unam,bg=azul_unam}
+\setbeamercolor{frametitle}{fg=azul_unam,bg=dorado_unam}
 
+% Quitar el redondeado de los slides con titulo
+\setbeamertemplate{frametitle}[default][colsep=-4bp,rounded=false,shadow=false]
 % Pongo linkcolor vacio para que los links internos no tengan color
 % Solo los links externos tienen color
 \hypersetup{colorlinks,linkcolor=,urlcolor=azul_unam}
 
-\setbeamertemplate{caption}{\insertcaption}
+\usepackage{csquotes} % Por que si no esta presnte AQUI polyglosia tira un warning
 
 \begin{document}
 
