@@ -107,10 +107,19 @@
 % Logo appears in all slides not only title
 %\logo{\includegraphics[height=1cm]{img/escudo-a}}
 
+%Redefinimos algunos enviroments en español
+\newtheorem{thm}{Teorema:}
+\newtheorem{lem}{Lema:}
+\newtheorem{mydef}{Definición:}
+\newtheorem{obs}{Observación:}
+\newtheorem{prop}{Proposición:}
+\newtheorem{cor}{Corolario:}
+
 \usetheme{Frankfurt}
 \useinnertheme{circles}
 \usecolortheme{orchid}
-
+% Necesito redefinir smothbars para poder quitar las sombras abajo
+\useoutertheme{smoothbars}
 
 % Definicion de colores especiales
 \definecolor{light_blue}{RGB}{4, 163, 198}
@@ -118,9 +127,22 @@
 \definecolor{dorado_unam}{RGB}{187, 136, 0}
 \definecolor{amarillo_quemado}{RGB}{212, 180, 21}
 
+% Quitar la sombra entre las secciones y los titulos
+\makeatletter
+\AtBeginDocument{
+\pgfdeclareverticalshading{beamer@barshade}{\the\paperwidth}{%
+         color(0ex)=(azul_unam);%
+         color(0.5ex)=(section in head/foot.bg);%
+         color(4ex)=(section in head/foot.bg)%
+       }
+}
+\makeatother
+
 \setbeamercolor{title}{fg=azul_unam,bg=dorado_unam}
 \setbeamercolor{section in head/foot}{fg=dorado_unam,bg=azul_unam}
 \setbeamercolor{frametitle}{fg=azul_unam,bg=dorado_unam}
+
+\setbeamercolor{block title}{bg=azul_unam}
 
 % Quitar el redondeado de los slides con titulo
 \setbeamertemplate{frametitle}[default][colsep=-4bp,rounded=false,shadow=false]
