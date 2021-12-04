@@ -9,7 +9,7 @@ Cada plantilla está pensada para una situación diferente, pero todas ellas con
 * [TrabajoFinal](TrabajoFinal/): Para hacer un trabajo importante en alguna materia.
 * [Tarea](Tarea/): Plantilla simple, que maximiza el espacio. Ideal para una tarea de esas que se entregan cada clase.
 * [Notas](Notas/): Para las notas personales de estudio o notas de un profesor que prepara su clase.
-* [Examen](): Para que un profesor elabore los enunciados de una tarea o un examen.
+* [Examen](Examen/): Para que un profesor elabore los enunciados de una tarea o un examen.
 
 ## Presentaciones
 * [Conferencia](Conferencia/): Presentación de beamer para presentar en un evento o exposición de un alumno en clase.
