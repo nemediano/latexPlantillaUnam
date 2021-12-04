@@ -1,10 +1,11 @@
 # Plantilla para un trabajo final
-Esta plantilla sirve para eleborar un trabajo de fin de curso. Puedes ver el [pdf](TrabajoFinal.pdf) para ver un ejemplo del resultado.
 
-* La portada es sencilla, con datos básicos y tiene el indice
-* Usa el modo de página sencilla,  por que probablemente le pongas un clip o una grapa en vez de engargolar o en un folder de costilla
-* En cada hojar hay solo la pagina y el titulo del capítulo
-* Incluye el indice (o tabla de contenidos), y la bibliografía
+Esta plantilla sirve para elaborar un trabajo de fin de curso. Puedes ver el [pdf](TrabajoFinal.pdf) para ver un ejemplo del resultado.
+
+* La portada es sencilla, con datos básicos y tiene el índice
+* Usa el modo de página sencilla, porque probablemente le pongas un clip o una grapa en vez de engargolar o usar un folder de costilla
+* En cada hoja hay solo el numero de la pagina y el título del capítulo
+* Incluye el índice (o tabla de contenidos), y la bibliografía
 
 Además, la plantilla incluye ejemplo de uso de todos los casos típicos que se me ocurrieron:
 
@@ -13,7 +14,7 @@ Además, la plantilla incluye ejemplo de uso de todos los casos típicos que se 
 * Usar figuras y subfiguras
 * Incluir pseudo código y código fuente (incluso para incluirlo desde un archivo externo)
 
-La plantilla está primordialmente implementada en el archivo `Trabajo.sty`. El preambulo esta en `TrabajoFinal.tex` desde donde se incluyen los demas archivos `*.tex` que son los que propiamente contienen el contenido de las notas.
+La plantilla está primordialmente implementada en el archivo `Trabajo.sty`. El preámbulo está en `TrabajoFinal.tex` desde donde se incluyen los demas archivos `*.tex` que son los que contienen el contenido del trabajo.
 
 En el directorio `img`, se incluyen las imágenes o figuras. También hay un directorio `src` que incluye código fuente en lenguaje C++. Este sirve como ejemplo de uso del paquete [minted](https://ctan.org/pkg/minted), para incluir código directamente de un archivo fuente y es solo un ejemplo.
 
@@ -32,5 +33,3 @@ La primera vez, para compilar desde cero, se puede hacer:
 1. Ejecutar XeLaTeX
 1. Ejecutar XeLaTeX
 1. Ver el pdf
-
-

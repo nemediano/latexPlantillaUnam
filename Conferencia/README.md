@@ -1,10 +1,11 @@
 # Plantilla de Beamer para una conferencia
-Esta plantilla sirve para hacer un presentacion en algun evento. Puedes ver el [pdf](presentacion.pdf) para ver un ejemplo del resultado.
 
-La idea de la presentacion es que se de un evento especial que probablemente no se repita.
+Esta plantilla sirve para hacer una presentación en algún evento. Puedes ver el [pdf](presentacion.pdf) para ver un ejemplo del resultado.
 
-* La portada incluye la fecha, el titulo, nombre del autor y la institucion que representa.
-* En cada diapositiva, hay datos del autor, el titulo corto de la presentacion, la fecha, el evento y el número de slide.
+La idea de la presentación es que se trate de un evento especial que probablemente no se repita.
+
+* La portada incluye la fecha, el título, nombre del autor y la institución que representa.
+* En cada diapositiva, hay datos del autor, la institución, el título corto de la presentación, la fecha, el evento y el número de slide.
 * Incluye una diapositiva con la agenda.
 
 Además, la plantilla incluye ejemplo de uso de todos los casos típicos que se me ocurrieron:

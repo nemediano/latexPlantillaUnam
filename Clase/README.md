@@ -1,11 +1,12 @@
 # Plantilla de Beamer para una clase
-Esta plantilla sirve para hacer un presentacion para una clase. Puedes ver el [pdf](presentacion.pdf) para ver un ejemplo del resultado.
 
-La idea de la presentacion es que se pueda presentar en mas de una sesion. Cosas como el número de diapositiva no importan.
-Solo importa el tema que se esta tratando y donde se situa la dispositiva dentro de éste.
+Esta plantilla sirve para hacer una presentación para una clase. Puedes ver el [pdf](presentacion.pdf) para ver un ejemplo del resultado.
 
-* El titulo, nombre del autor, la institución y la materia solo se incluyen en la dispositiva titulo.
-* En cada diapositiva hay datos minimos: solo la seccion y el titulo del slide. Se maximiza el espacio
+La idea de la presentación es que se pueda presentar en más de una sesión. Cosas como el número de las diapositivas no importan.
+Solo importa el tema que se está tratando y donde se sitúa la dispositiva dentro de éste.
+
+* El título, nombre del autor, la institución y la materia solo se incluyen en la dispositiva de título.
+* En cada diapositiva hay datos mínimos: solo la sección y el título del slide. Se maximiza el espacio
 * Incluye una diapositiva con la bibliografía.
 
 Además, la plantilla incluye ejemplo de uso de todos los casos típicos que se me ocurrieron:
