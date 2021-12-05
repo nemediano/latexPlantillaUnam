@@ -1,9 +1,9 @@
 \documentclass[10pt,oneside]{article}
-\usepackage{amsmath} % Simbolos refinados de matemáticas
+\usepackage{amsmath} % Símbolos refinados de matemáticas
 \usepackage{graphicx} % Incluir imágenes
 \usepackage{subcaption} % Poder usar subfiguras
 \usepackage{amsfonts}
-\usepackage{amssymb} % Los simbolos el los conjuntos numéricos
+\usepackage{amssymb} % Los símbolos el los conjuntos numéricos
 
 % Opciones de lenguaje usando polyglossia (defino dos para este documento)
 \usepackage{polyglossia}
@@ -11,7 +11,7 @@
 \setotherlanguage[variant=american]{english}
 
 
-% El sistema de bibliografá es Biber (no necesitas BibTeX)
+% El sistema de bibliógrafa es Biber (no necesitas BibTeX)
 \usepackage[
   backend=biber
 ]{biblatex}
@@ -26,7 +26,7 @@
   bottom=1.5cm
 ]{geometry}
 
-% Poner los links en azul y definir los metadatos del pdf
+% Poner los links en azul y definir los meta-datos del pdf
 \usepackage[
   final,
   unicode,
@@ -45,10 +45,10 @@
 % Tablas con estilo profesional
 \usepackage{booktabs}
 
-% Para poner algortmos en pseudo código
+% Para poner algoritmos en pseudo código
 \usepackage{algpseudocode}
 \usepackage{algorithm} %Ambiente flotante para los algoritmos
-%Hacer los comentarios en el pseudocodigo como en C++
+%Hacer los comentarios en el pseudocódigo como en C++
 %\algrenewcommand{\algorithmiccomment}[1]{\hskip3em$//$ #1}
 \floatname{algorithm}{Algoritmo}
 
@@ -61,7 +61,7 @@
 \fancyhead[L]{Cálculo I} %Nombre de la materia
 \fancyhead[C]{José Doroteo Arango Arámbula} % Nombre del alumno
 \fancyhead[R]{\href{mailto:panchovilla@gmail.com}{panchovilla@gmail.com}} % Email
-\fancyfoot[R]{Profesor: Dr. Enrique Graue Wiechers}
+\fancyfoot[R]{Profesor: Dr. Otto Gunther Octavius}
 % https://tex.stackexchange.com/questions/227/how-can-i-add-page-of-on-my-document
 \fancyfoot[C]{\thepage\ of \pageref*{LastPage}}
 %\fancyfoot[C]{ of }
@@ -70,49 +70,56 @@
 \renewcommand{\footrulewidth}{2pt}
 
 \usepackage[newfloat=true]{minted} %Para insertar código fuente en algún lenguaje de programación
-% Requiere que comiples usando:
+% Requiere que compiles usando:
 % $xelatex -shell-escape input.tex
 
-% Para el correcto funcinamiento, esta plantilla debe compilarse asi:
+% Para el correcto funcionamiento, esta plantilla debe compilarse así:
 % 1 XeLaTeX
 % 2 Biber 
-%    Antes de 20.04 esta herramineta no estaba en los repositorios oficiales de Ubuntu
+%    Antes de 20.04 esta herramienta no estaba en los repositorios oficiales de Ubuntu
 %    ver: https://tex.stackexchange.com/questions/154751/biblatex-with-biber-configuring-my-editor-to-avoid-undefined-citations/154763#154763)
 % 3 XeLaTex
 % 4 XeLateX
 % 5 ViewPDF
 
-\author{José Doroteo Arango Arámbula} % Again, no utf8 I do not know why
+\author{José Doroteo Arango Arámbula} %Como el nombre del autor ya viene en el encabezado
 \title{Tarea 1}
-% Si por alguna razón la fecha que desaes que aparezca no es la de hoy
+% Si por alguna razón la fecha que deseas que aparezca no es la de hoy
 % \usepackage{datetime}
 % \newdate{date}{06}{09}{2012}
 % \date{\displaydate{date}}
 \date{\today}
 
-% Configuracion del entorno minted para poner código fuente
+% Configuración del entorno minted para poner código fuente
 \DeclareCaptionFormat{mitedFormat}{%
     \textbf{#1#2}#3}
 \DeclareCaptionStyle{minetdStyle}{skip=0cm,width=.85\textwidth,justification=centering,
   font=footnotesize,singlelinecheck=off,format=mitedFormat,labelsep=space}
 \newenvironment{mintedCode}{\captionsetup{type=listing,style=minetdStyle}}{}
 
-\usepackage{dirtytalk} %For using qutation marks (usa comillas in spanish)
+\usepackage{dirtytalk} % Para usar comillas
 
-% Cambia el nombre de la etiqueta. Afecta a todos los codigos minted del codumento
+% Cambia el nombre de la etiqueta. Afecta a todos los códigos minted del documento
 \SetupFloatingEnvironment{listing}{name=Código}
 % Opciones de minted para el lenguaje C++
 \setminted[cpp]{frame=lines,framesep=0.25cm,baselinestretch=1,fontsize=\scriptsize,breaklines}
-% Cuando lo hagas dentro de un parrafo el tamaño de fuente debe ser normal
+% Cuando lo hagas dentro de un párrafo el tamaño de fuente debe ser normal
 \setmintedinline[cpp]{fontsize=auto}
 
-\setlength{\parindent}{0pt} % Quita las sangrias
+\setlength{\parindent}{0pt} % Quita las sangrías
 
-\usepackage{csquotes} % Por que si no esta presnte AQUI polyglosia tira un warning
+\usepackage{csquotes} % Por que si no esta presente AQUI polyglossia tira un warning
 
 \begin{document}
-\maketitle
-\thispagestyle{fancy} %Para que los fancy headers esten desde la primera página
+% \maketitle
+%Si quieres mas espacio pon el titulo a mano
+\begin{center}
+{\large \textsc{Tarea 1} }
+\end{center}
+\begin{flushright}
+Fecha de entrega: \textbf{\today}
+\end{flushright}
+\thispagestyle{fancy} %Para que los fancy headers estén desde la primera página
 % El cuerpo de la tarea esta en este otro archivo
 \input{cuerpo}
 % Añade una entrada a las referencias, aun cuando no esta citado explícitamente

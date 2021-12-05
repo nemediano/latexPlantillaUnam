@@ -8,12 +8,12 @@ Primero, se puede crear una ecuación simple de la siguiente manera:
  \frac{x^{2}}{a^{2}} + \frac{y^{2}}{b^{2}} = 1
  \end{equation}
 Y podemos hacer una referencia a ella en el texto de la siguiente manera: La  ecuación \eqref{eq:elipse} representa una elipse.
-Si no queremos que las ecuaciones esten numeradas podemos hacer:
+Si no queremos que las ecuaciones estén numeradas podemos hacer:
  \begin{equation}
  \nonumber
  \binom{n}{k} = \frac{n!}{k!(n-k)!} 
  \end{equation}
- También se pueden insertar ecuaciones dentro de un párrafo, por ejemplo: $\forall x \in \mathbb{R}$.
+También se pueden insertar ecuaciones dentro de un párrafo, por ejemplo: $\forall x \in \mathbb{R}$.
 Se pueden poner links a un sitio web de la siguiente manera:
 Para aprender acerca de integrales y sumatorias puedes leer el siguiente \href{https://en.wikibooks.org/wiki/LaTeX/Mathematics#Sums_and_integrals}{wikilibro} o puedes buscarlo en \url{www.google.com}.
 Nótese que la segunda forma cambia la fuente del texto.
@@ -58,9 +58,9 @@ Por regla general, lo mejor es usar imágenes de tipo vectorial.
 Mi tipo de formato preferido es \verb|*.eps| y recomiendo usar \href{https://ipe.otfried.org/}{IPE} o \href{https://inkscape.org/}{InkScape}, pero otros formatos vectoriales populares para imágenes son el \verb|*.pdf| y \verb|*.svg|.
 
 \item También es posible poner figuras, compuestas de varias subfiguras.
-Cada subfigura tiene su propio pié y hay un pié de fígura extra para todo el grupo.
+Cada subfigura tiene su propio pié y hay un pié de figura extra para todo el grupo.
 Posteriormente, es posible referirse a toda la figura así: Véase la  Figura~\ref{fig:two} ó referirte a una subfigura así:
-Vea la Sub Fígura~\ref{fig:2b}.
+Vea la Figura~\ref{fig:2b}.
 
 \begin{figure}[htp]
  \centering
@@ -88,7 +88,7 @@ Vea la Sub Fígura~\ref{fig:2b}.
    \label{fig:2d}
  \end{subfigure}
     
-  \caption{Componentes del módelo de iluminación de Phong.}
+  \caption{Componentes del modelo de iluminación de Phong.}
   \label{fig:two}
 \end{figure}
 
@@ -96,12 +96,12 @@ También por regla general usamos entornos flotantes para poner Figuras, Tablas 
 Esto quiere decir que tenemos que usar especificadores como guías para que \LaTeX{} sepa dónde ponerlos exactamente en el texto.
 Puedes consultar más de eso en \href{https://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions}{este} wikilibro.
 
-\item Así es como se cita un libro: éste ejemplo fué tomado de~\cite{Devore2012}.
+\item Así es como se cita un libro: éste ejemplo fue tomado de~\cite{Devore2012}.
 También hay un ejemplo de como hacer que un libro aparezca en las referencias sin que esté citado explícitamente en el texto.
 
 Por último, este es un ejemplo de una tabla muy elegante: Cuadro~\ref{tab:exey}.
 Hace uso del paquete \href{https://ctan.org/pkg/booktabs}{booktabs} por que las tablas predeterminadas en \LaTeX se ven muy anticuadas.
-Debes de consultar este \href{https://jdhao.github.io/2019/08/27/latex_table_with_booktabs/}{post} y leer esta \href{https://people.inf.ethz.ch/markusp/teaching/guides/guide-tables.pdf}{presentacion} si vas a uasr muchas tablas en tu tesis.
+Debes de consultar este \href{https://jdhao.github.io/2019/08/27/latex_table_with_booktabs/}{post} y leer esta \href{https://people.inf.ethz.ch/markusp/teaching/guides/guide-tables.pdf}{presentación} si vas a usar muchas tablas.
 
 \begin{table}[htb]
   \begin{center}
@@ -124,11 +124,10 @@ Debes de consultar este \href{https://jdhao.github.io/2019/08/27/latex_table_wit
 Este ejemplo también demuestra como poner \say{comillas} en \LaTeX{}
 
 Primero voy a mostrar cómo incluir algoritmos en forma de pseudocódigo.
-Y desde luego se incluyen en el índice y se pueden referencias así: 
-El Algoritmo~\ref{alg:euclid} es el primer algoritmo en la historia.
+Se pueden referencias así: el Algoritmo~\ref{alg:euclid} es el primer algoritmo en la historia.
 Se puede referenciar una línea del algoritmo.
 El ciclo while termina en la línea line~\ref{euclidendwhile}.
-Las ídeas las tomé de este enlace \href{https://en.wikibooks.org/wiki/LaTeX/Algorithms#Typesetting_using_the_algorithmicx_package}{wikibook} y de éste \href{https://tex.stackexchange.com/questions/229355/algorithm-algorithmic-algorithmicx-algorithm2e-algpseudocode-confused}{post}.
+Las ideas las tomé de este enlace \href{https://en.wikibooks.org/wiki/LaTeX/Algorithms#Typesetting_using_the_algorithmicx_package}{wikibook} y de éste \href{https://tex.stackexchange.com/questions/229355/algorithm-algorithmic-algorithmicx-algorithm2e-algpseudocode-confused}{post}.
 
 El entorno de algoritmo como flotante puede salirse de los márgenes de una pagina si no lo configuras correctamente.
 Hay un \href{https://tex.stackexchange.com/questions/350434/adjust-width-of-algorithm-float}{truco} para hacerlo entrar en un cierto ancho.
@@ -136,12 +135,12 @@ Sin embargo, recomiendo usar el truco como última alternativa.
 En estos ejemplos no fue necesario.
 
 \begin{algorithm}[H]
-\caption{Algoritmo de Euclides}
+\caption{de Euclides}
 \label{alg:euclid}
 \begin{algorithmic}[1] % El número le dice al entrono desde que numero empezar a contar. Si le pones 0 omite los números
     \Procedure{Euclid}{$a,b$} \Comment{El g.c.d. de $a$ y $b$}
     \State $r\gets a \bmod b$
-    \While{$r\not=0$} \Comment{Si $r = 0$ ya tenemos la respuesta}
+    \While{$r\not=0$} \Comment{Si $r = 0$, ya tenemos la respuesta}
         \State $a \gets b$
         \State $b \gets r$
         \State $r \gets a \bmod b$
@@ -165,7 +164,7 @@ int main() {
 
 Este es otro ejemplo de cómo incluir Python dentro de un párrafo: \mintinline{python}{print(x**2)}.
 Finalmente, lo más útil es incluir el código fuente desde un archivo externo: Vean  el Listado~\ref{lst:example} como ejemplo.
-Me ayude muchisimo de \href{https://tex.stackexchange.com/questions/252263/alignment-of-minted-line-numbers}{aquí} y de la \href{https://www.overleaf.com/learn/latex/Code_Highlighting_with_minted}{ayuda de Overleaf}.
+Me ayude muchísimo de \href{https://tex.stackexchange.com/questions/252263/alignment-of-minted-line-numbers}{aquí} y de la \href{https://www.overleaf.com/learn/latex/Code_Highlighting_with_minted}{ayuda de Overleaf}.
 Observa la configuración que hice en el archivo \verb|tarea.sty| para ver cómo obtuve el resultado del Listado~\ref{lst:example}.
 
 \begin{listing}
@@ -173,7 +172,7 @@ Observa la configuración que hice en el archivo \verb|tarea.sty| para ver cómo
   firstline=54, %If you omit this two fields, the whole file is pulled
   lastline=68
   ]{cpp}{src/GccTest.cpp}
-  \caption{Una implementación defectuosa de insertion sort}\label{lst:example}
+  \caption{Una implementación defectuosa de \textenglish{insertion sort}}\label{lst:example}
 \end{listing}
 
 \end{enumerate}
