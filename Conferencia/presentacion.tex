@@ -1,35 +1,28 @@
-%\documentclass{beamer}
-% Aspect ratio
-\documentclass[aspectratio=43,11pt]{beamer}
+\documentclass[aspectratio=169,11pt]{beamer}
 % Aspect ratio:
 % 610 => 16:10 
-% 169 => 16:9
+% 169 => 16:9 (Mas común actualmente)
 % 149 => 14:9
 %  54 => 5:4
-%  43 => 4:3 Default
+%  43 => 4:3 (Default)
 %  32 => 3:2
 
-% Font size
+% Tamaño de la fuente
 % 8pt, 9pt, 10pt, 11pt (default), 12pt, 14pt, 17pt, 20pt
-
-%\usefonttheme{default}
-% structurebold
-% structurebolditalic
-% structuresmallcapsserif
-% structureitalicsserif
-% serif
-% default. 
 
 % Opciones de lenguaje usando polyglossia (defino dos para este documento)
 \usepackage{polyglossia}
 \setmainlanguage{spanish}
 \setotherlanguage[variant=american]{english}
-\usepackage{amssymb} % Los simbolos el los conjuntos numéricos
 
+% Los símbolos el los conjuntos numéricos
+\usepackage{amssymb} 
 
-\usepackage{graphicx} % Incluir imágenes
-\usepackage{subcaption} % Poder usar subfiguras
-% Para presentaciones usualmente no necestiamos la primer parte del caption
+ % Incluir imágenes
+\usepackage{graphicx}
+% Poder usar subfiguras
+\usepackage{subcaption} 
+% Para presentaciones usualmente no necesitamos la primer parte del caption
 \captionsetup[figure]{labelformat=empty}
 \captionsetup[table]{labelformat=empty}
 
@@ -41,37 +34,39 @@
 
 % Para poner algortmos en pseudo código
 \usepackage{algpseudocode}
-\usepackage{algorithm} %Ambiente flotante para los algoritmos
-%Make the comments similar to cpp
+% Ambiente flotante para los algoritmos
+\usepackage{algorithm} 
+% Hacer los comentarios en el pseudocódigo similares a los de C++
 %\algrenewcommand{\algorithmiccomment}[1]{\hskip3em$//$ #1}
-%El paquete algorithm, no tiene traduccion automatica
+% El paquete algorithm, no tiene traducción automática
 \floatname{algorithm}{Algoritmo}
 \renewcommand{\algorithmicrequire}{\textbf{Entradas:}}
 \renewcommand{\algorithmicensure}{\textbf{Salidas:}}
 \renewcommand{\listalgorithmname}{Índice de algoritmos}
 
-\usepackage[newfloat=true]{minted} %Para insertar código fuente en algún lenguaje de programación
-% Requiere que comiples usando:
-% $xelatex -shell-escape input.tex
 
-% Configuracion del entorno minted para poner código fuente
+%Para insertar código fuente en algún lenguaje de programación
+\usepackage[newfloat=true]{minted} 
+% Requiere que compiles usando:
+% $xelatex --shell-escape input.tex
+
+% Configuración del entorno minted para poner código fuente
 \DeclareCaptionFormat{mitedFormat}{%
     \textbf{#1#2}#3}
 \DeclareCaptionStyle{minetdStyle}{skip=0cm,width=.85\textwidth,justification=centering,
   font=footnotesize,singlelinecheck=off,format=mitedFormat,labelsep=space}
 \newenvironment{mintedCode}{\captionsetup{type=listing,style=minetdStyle}}{}
-
-\usepackage{dirtytalk} %For using qutation marks (usa comillas in spanish)
-
-% Cambia el nombre de la etiqueta. Afecta a todos los codigos minted del codumento
+% Cambia el nombre de la etiqueta. Afecta a todos los códigos minted del documento
 %\SetupFloatingEnvironment{listing}{name=Código}
 \captionsetup[listing]{labelformat=empty}
+
 % Opciones de minted para el lenguaje C++
 \setminted[cpp]{frame=lines,framesep=0.25cm,baselinestretch=1,fontsize=\scriptsize,breaklines}
-% Cuando lo hagas dentro de un parrafo el tamaño de fuente debe ser normal
+% Cuando lo hagas dentro de un párrafo el tamaño de fuente debe ser normal
 \setmintedinline[cpp]{fontsize=auto}
 
-\usetheme{default}
+% Para usar las comillas en español
+\usepackage{dirtytalk}
 
 % Crear un comando con el nombre de la UNAM
 \newcommand{\unam}{
@@ -86,7 +81,7 @@
     }
 }
 
-%Information to be included in the title page:
+% Construyendo la diapositiva de titulo
 \title[La revolución]{Mis años en la Revolución Mexicana}
 \subtitle{Una historia personal}
 \author[Pancho Villa]{José Doroteo Arango Arámbula}
@@ -100,7 +95,7 @@
 {Congreso Nacional de Software Libre, Abril 2021}
 \titlegraphic{\includegraphics[width=1.7cm]{img/escudo-a}}
 
-% Logo appears in all slides not only title
+% Para que el logo parezca en todas las diapositivas
 %\logo{\includegraphics[height=1cm]{img/escudo-a}}
 
 \usetheme{AnnArbor}
@@ -110,10 +105,7 @@
 \setbeamercolor{block title alerted}{fg=white,bg=red}
 \setbeamercolor{alerted text}{fg=red}
 
-%\useinnertheme[⟨options⟩]{⟨name⟩}
-
-% Definicion de colores especiales
-\definecolor{light_blue}{RGB}{4, 163, 198}
+% Definición de colores especiales
 \definecolor{azul_unam}{RGB}{0, 43, 122}
 \definecolor{dorado_unam}{RGB}{187, 136, 0}
 \definecolor{amarillo_quemado}{RGB}{212, 180, 21}
@@ -128,7 +120,7 @@
 \setbeamercolor{page number in head/foot}{fg=azul_unam,bg=dorado_unam}
 \setbeamercolor{date in head/foot}{fg=azul_unam,bg=dorado_unam}
 
-% Pongo linkcolor vacio para que los links internos no tengan color
+% Pongo linkcolor vacío para que los links internos no tengan color
 % Solo los links externos tienen color
 \hypersetup{colorlinks,linkcolor=,urlcolor=azul_unam}
 
@@ -136,7 +128,7 @@
 
 \begin{document}
 
-% El contenido de la presentacion esta en este otro archivo
+% El contenido de la presentación esta en este otro archivo
 \input{contenido}
 
 \end{document}

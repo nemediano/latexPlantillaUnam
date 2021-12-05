@@ -12,29 +12,27 @@
 
 \section{Antecedentes}
  \begin{frame}{¿Para que sirve?}
-%     itemize
      Esta plantilla puede servir para:
      \begin{itemize}
          \item Presentar en una conferencia o evento
-         \item Donde es hay varios ponentes
+         \item Donde hay varios ponentes
          \item No todo mundo te conoce.
      \end{itemize}
-% 
-     \vspace{0.4cm} % vertical space
-%     
-%     enumeration
+     
+     \vspace{0.4cm} % Insertar espacio vertical
+
      Para utilizar esta plantilla debes tener
      \begin{enumerate}
          \item Conocimientos mínimos de \LaTeX{}
          \item Leer el código fuente y el pdf al mismo tiempo
-         \item Leer el la \href{https://github.com/nemediano/latexPlantillaUnam/blob/main/Notas/README.md}{documentación}
+         \item Leer el la \href{https://github.com/nemediano/latexPlantillaUnam/tree/main/Conferencia}{documentación} del repositorio de la plantilla
      \end{enumerate}
-% 
+
      \vspace{0.2cm}
 
  \end{frame}
 
-\subsection{Formato basico} 
+\subsection{Formato básico} 
 \begin{frame}{Usando columnas}
 \begin{columns}
 \column[t]{0.5\textwidth}
@@ -45,7 +43,7 @@
          \item El último texto
      \end{itemize}
 \column[t]{0.5\textwidth}
-     Segunda columna, notese que estan alineadas hacia arriba
+     Segunda columna, nótese que están alineadas hacia arriba
      \begin{enumerate}
          \item Primer punto
          \item Segundo punto
@@ -72,39 +70,39 @@
 \begin{frame}{Una imagen desde un archivo}
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=0.45\textwidth]{img/normal}
+  \includegraphics[width=0.4\textwidth]{img/normal}
 \caption[Distribución normal]{Gráfica de una distribución normal. Fue creado usando el siguiente \href{https://www.statmethods.net/advgraphs/probability.html}{script en R}.}
 \end{figure}
 El caption y el resto del texto tienen la misma fuente
 \end{frame}
 
-\begin{frame}{Varias imagenes usando subfiguras}
+\begin{frame}{Varias imágenes usando subfiguras}
 \begin{figure}[htp]
  \centering
- \begin{subfigure}[b]{0.2\textwidth}
+ \begin{subfigure}[b]{0.17\textwidth}
    \includegraphics[width=\textwidth]{img/ambiente}
    \caption{Ambiental.}
  \label{fig:2a}
  \end{subfigure}
 ~
- \begin{subfigure}[b]{0.2\textwidth}
+ \begin{subfigure}[b]{0.17\textwidth}
    \includegraphics[width=\textwidth]{img/especular}
    \caption{Especular.}
    \label{fig:2b}
  \end{subfigure}
 ~
- \begin{subfigure}[b]{0.2\textwidth}
+ \begin{subfigure}[b]{0.17\textwidth}
    \includegraphics[width=\textwidth]{img/difuso}
    \caption{Difusa.}
    \label{fig:2c}
  \end{subfigure}
 \\
- \begin{subfigure}[b]{0.35\textwidth}
+ \begin{subfigure}[b]{0.22\textwidth}
    \includegraphics[width=\textwidth]{img/completo}
    \caption{Modelo completo.}
    \label{fig:2d}
  \end{subfigure}
-  \caption{Componentes del módelo de iluminación de Phong.}
+  \caption{Componentes del modelo de iluminación de Phong.}
   \label{fig:two}
 \end{figure}
 \end{frame}
@@ -122,7 +120,7 @@ El caption y el resto del texto tienen la misma fuente
      \begin{enumerate}
          \item Se usan columnas
          \item La figura cambia de tamaño
-         \item El caption puede apachurarse
+         \item El caption puede apachurrase
      \end{enumerate}
 \end{columns}
 \end{frame}
@@ -130,7 +128,7 @@ El caption y el resto del texto tienen la misma fuente
 \begin{frame}{Incluir tablas}
 Este es un ejemplo de una tabla muy elegante.
 Hace uso del paquete \href{https://ctan.org/pkg/booktabs}{booktabs} por que las tablas predeterminadas en \LaTeX{} se ven muy anticuadas.
-Debes de consultar este \href{https://jdhao.github.io/2019/08/27/latex_table_with_booktabs/}{post} y leer esta \href{https://people.inf.ethz.ch/markusp/teaching/guides/guide-tables.pdf}{presentacion} si vas a usar muchas tablas.
+Debes de consultar este \href{https://jdhao.github.io/2019/08/27/latex_table_with_booktabs/}{post} y leer esta \href{https://people.inf.ethz.ch/markusp/teaching/guides/guide-tables.pdf}{presentación} si vas a usar muchas tablas.
 Este ejemplo también demuestra como poner \say{comillas}
 \begin{table}[htb]
   \begin{center}
@@ -154,18 +152,17 @@ Este ejemplo también demuestra como poner \say{comillas}
 En esta diapositiva, el siguiente texto esta
 \alert{resaltado} por que es importante.
 Favor de no abusar.
-    % Blocks styles
-    \begin{block}{Bloque generico}
-        Texto dentro del bloque.
-    \end{block}
+\begin{block}{Bloque genérico}
+    Texto dentro del bloque.
+\end{block}
 
-    \begin{alertblock}{Bloque de Alerta}
-        Texto dentro del bloque.
-    \end{alertblock}
+\begin{alertblock}{Bloque de Alerta}
+    Texto dentro del bloque.
+\end{alertblock}
 
-    \begin{exampleblock}{Bloque de Ejemplo}
-        Texto dentro del bloque.
-    \end{exampleblock}   
+\begin{exampleblock}{Bloque de Ejemplo}
+    Texto dentro del bloque.
+\end{exampleblock}   
 \end{frame}
 
 \section{Matemáticas}
@@ -192,7 +189,7 @@ P\left(X \leq 3 \right) &= \int_{0}^{3} \frac{1}{25} y \,\mathrm{d}y \\
 \subsection{Ciencias de la computación}
 \begin{frame}{Incluyendo un algoritmo}
 \begin{algorithm}[H]
-\renewcommand{\thealgorithm}{} % Remove the algorthm number in the caption
+\renewcommand{\thealgorithm}{} % Quita el número del algoritmo en el caption
 \caption{de Euclides}
 \label{alg:euclid}
 \begin{algorithmic}[1] % El número le dice al entrono desde que numero empezar a contar. Si le pones 0 omite los números
@@ -202,7 +199,7 @@ P\left(X \leq 3 \right) &= \int_{0}^{3} \frac{1}{25} y \,\mathrm{d}y \\
         \State $a \gets b$
         \State $b \gets r$
         \State $r \gets a \bmod b$
-    \EndWhile\label{euclidendwhile}
+    \EndWhile
     \State \textbf{return} $b$\Comment{$gcd = b$}
     \EndProcedure
 \end{algorithmic}
@@ -210,7 +207,7 @@ P\left(X \leq 3 \right) &= \int_{0}^{3} \frac{1}{25} y \,\mathrm{d}y \\
 
 \end{frame}
 
-\begin{frame}[fragile] % Usar minted requiere que uses opcion fragile
+\begin{frame}[fragile] % Usar minted requiere que uses opción fragile
 \frametitle{Incluyendo código fuente}
 \begin{listing}
 \begin{minted}{cpp}
@@ -219,18 +216,18 @@ int main() {
   return 0;
 }
 \end{minted}
-\caption{Un programa de ejemplo en C}\label{lst:hello}
+\caption{Un programa de ejemplo en C}
 \end{listing}
 
 Este es otro ejemplo de cómo incluir Python dentro de un párrafo: \mintinline{python}{print(x**2)}.
 
 \end{frame}
 
-\begin{frame}[fragile] % Usar minted requiere que uses opcion fragile
+\begin{frame}[fragile] % Usar minted requiere que uses opción fragile
 \frametitle{Incluyendo código fuente desde un archivo}
 \begin{listing}
 \inputminted[
-  firstline=54, %If you omit this two fields, the whole file is pulled
+  firstline=54, % Si omites estos dos parámetros se usa todo el archivo
   lastline=68
   ]{cpp}{src/GccTest.cpp}
   \caption{Una implementación defectuosa de \textenglish{insertion sort}}\label{lst:example}
