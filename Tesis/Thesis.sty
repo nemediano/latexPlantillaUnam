@@ -1,58 +1,46 @@
 \ProvidesPackage{Thesis}
 
-%%%%Installing texlive-lang-spanish
-%%%%is mandatory.
-% Language options (we set two languages in this text)
+% Usamos polyglosia en vez de babel por ser mas moderno. Definimos dos lenguajes
 \usepackage{polyglossia}
 \setmainlanguage{spanish}
 \setotherlanguage[variant=american]{english}
 
-%%%%Electronic version
-%\usepackage[obeyDraft, spanish, color=green!40, colorinlistoftodos=true]{todonotes}
-%%%%Print version
-% \usepackage[obeyDraft, spanish, backgroundcolor=white, linecolor=black, colorinlistoftodos=true]{todonotes}
-%%%%To completely disable todonotes, regardless of the draft version of the document.
-% \usepackage[disable, textsize=tiny, spanish, color=green!40]{todonotes}
-%%%%To enable todonotes, regardless of the draft version of the document.
-% \usepackage[textsize=tiny, spanish, color=green!40]{todonotes}
-%%%%Print version with enabled todonotes.
-% \usepackage[spanish, backgroundcolor=white, linecolor=black, colorinlistoftodos=true]{todonotes}
-
-%These four are required to create the cover
-\usepackage{graphicx} % Images
-\usepackage{subcaption} % The hability of using subfigures
+\usepackage{graphicx} % Poder incluir imágenes
+\usepackage{subcaption} % Poder usar subfiguras
 \usepackage[normalem]{ulem}
-%%%%For displaying in multiple columns.
+% Si se requiere una renglón con múltiples columnas en la tablas.
 \usepackage{multicol}
-%%%%For spanning multiple rows.
+% Una columna con múltiples renglones en las tablas
 \usepackage{multirow}
 
-%%%%For using \text{} in math mode.
-%%%%Also for \dfrac and \align
+% Símbolos refinados de matemáticas
 \usepackage{amsmath}
-%%%%Several math symbols, like \bigstar and \smallsetminus.
+% Símbolos extras de matemáticas
 \usepackage{amssymb}
+% Espacios después de ciertos símbolos
+\usepackage{textcomp} 
 
-\usepackage{textcomp} %Space after special symbols
-
-%Profesionall looking tables
+% Tablas con look profesional
 \usepackage{booktabs}
 \newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
 
-%Set page space before everything else
+% Antes de cualquier cosa define el espacio (la pagina y los margenes)
 \usepackage[letterpaper,margin=3cm]{geometry}
 
-%%%%Pretty headers
+% Los encabezados y pies de página
 \usepackage{fancyhdr}
+% Configura la pagina `fancy`
 \setlength{\headheight}{16pt}
 \pagestyle{fancy}
-\fancyhf{}
+\fancyhf{} % Quita todo
+% Pon lo siguiente
 \fancyhead[LE,RO]{\thepage}
 \fancyhead[RE]{\textsc{\nouppercase{\leftmark}}}
 \fancyhead[LO]{\textsc{\nouppercase{\rightmark}}}
+% Configura la pagina vacía (La que se ocupa en el índice, dedicatoria, etc)
 \fancypagestyle{plain}{ %
-\fancyhf{} % remove everything
-\renewcommand{\headrulewidth}{0pt} % remove lines as well
+\fancyhf{} % Quita todo
+\renewcommand{\headrulewidth}{0pt} % También las lineas
 \renewcommand{\footrulewidth}{0pt}
 }
 
@@ -60,33 +48,45 @@
 \setlength{\parskip}{1.5ex}
 
 \usepackage{amsthm}
-%%%%Translations
+% Algunas definiciones de nuevos entornos que podrían ser útiles
 \theoremstyle{plain}
 \newtheorem{definition}{Definición}[section]
 \newtheorem{example}{Ejemplo}[section]
+\newtheorem{teo}{Teorema}
+\newtheorem*{teoSN}{Teorema}
 
-%%%%For its use with todonotes (I put to obeyDraft), we must say that it's a final version
-%%%%otherwise no links will appear.
-\usepackage[final,unicode,colorlinks=true,citecolor=blue,linkcolor=blue,plainpages=false,
-pdfpagelabels=true,pdfauthor={José Doroteo Arango Arámbula},pdftitle={Mi trabajo de titulo muy largo y muy especifico como debe ser en una tesis}]{hyperref}
-%%%%If I set draft, no links will appear (for printable version).
+% Para la versión final
+\usepackage[
+final,
+unicode,
+colorlinks=true,
+citecolor=blue,
+linkcolor=blue,
+urlcolor=blue,
+plainpages=false,
+pdfpagelabels=true,
+pdfauthor={José Doroteo Arango Arámbula},
+pdftitle={Mi trabajo de titulo muy largo y muy especifico como debe ser en una tesis}
+]{hyperref}
+% Si se usa draft
 % \usepackage[draft,pdftex,unicode,colorlinks=true,citecolor=blue,linkcolor=blue,plainpages=false,
-% pdfpagelabels=true,pdfauthor={Laura Leonides}]{hyperref}
+% pdfpagelabels=true,pdfauthor={José Doroteo Arango Arámbula}{hyperref}
 
 \setcounter{tocdepth}{4}
 \setcounter{secnumdepth}{4}
-
-\usepackage{setspace} %El espacio de interlinead
-%Espacio de 1.5 lineas
+% Para poner el espacio de entrelineado
+\usepackage{setspace} 
+% Espacio de 1.5 lineas
 \onehalfspacing
 
-%Este paquete me deja customizar los pies de las figuras y las tablas
+% Este paquete me deja personalizar los pies de las figuras y las tablas
 \usepackage[margin=2cm,font=footnotesize,labelfont=bf]{caption}
 
-%%Estos dos paquetes me dejan poner pseudocodigos se usan en conjunto
+% Estos dos paquetes me dejan poner pseudocódigos se usan en conjunto
 \usepackage{algpseudocode}
-\usepackage{algorithm} %float enviroment for algorithms
-%Make the comments similar to cpp
+% Ambiente flotante para algoritmos
+\usepackage{algorithm}
+% Que los comentarios en un pseudocódigo sean similares a C++
 %\algrenewcommand{\algorithmiccomment}[1]{\hskip3em$//$ #1}
 %Poniendo los encabezados de los algoritmos en español
 \floatname{algorithm}{Algoritmo}
@@ -94,37 +94,36 @@ pdfpagelabels=true,pdfauthor={José Doroteo Arango Arámbula},pdftitle={Mi traba
 \renewcommand{\algorithmicensure}{\textbf{Salidas:}}
 \renewcommand{\listalgorithmname}{Índice de algoritmos}
 
+% Poner urls
 \usepackage{url}
-%\usepackage[color]{changebar} %Barras de cambio
+% Barras de cambio
+%\usepackage[color]{changebar} 
 %\cbcolor{blue} %Color de barra de cambio
 
-%\pagestyle{fancyplain}
-\newtheorem{teo}{Teorema}
-\newtheorem*{teoSN}{Teorema}
-
+% Usar negritas en entorno de matemáticas
 \usepackage{bm}
 \usepackage{mathrsfs}
-\usepackage{amsthm}
 
-\usepackage{dirtytalk} %For using qutation marks (ro comillas in spanish)
+% Para usar las comillas
+\usepackage{dirtytalk} 
 
-\usepackage{epigraph} %To add epighaphs
-\setlength{\epigraphwidth}{0.6\textwidth} %If not space for epigharp is to short
-
-\usepackage[newfloat=true]{minted} %For inserting source code and embed source files
-%Requieres compilation using:
+% Para poner epígrafes
+\usepackage{epigraph} 
+% Si no ajustamos, el espacio para un epígrafe es muy poco
+\setlength{\epigraphwidth}{0.6\textwidth} 
+% Para insertar código fuente
+\usepackage[newfloat=true]{minted} 
+% Requieres compilar usando:
 % $xelatex -shell-escape input.tex
-%In order to work this temple needs to be build like this:
+% Para compilar todo el proyecto se necesita:
 % 1 XeLaTeX
 % 2 Biber 
-%    This tool is not in the default Kile: I need to install the package and then configure 
-%    here: https://tex.stackexchange.com/questions/154751/biblatex-with-biber-configuring-my-editor-to-avoid-undefined-citations/154763#154763)
 % 3 XeLaTex
 % 4 XeLateX
 % 5 ViewPDF
 
-% Define a non-float enviroment for codes that span multiple pages
-% I took the hack from here
+% Definir un entorno no flotante para códigos que abarcan varias páginas
+% Tomé el hack de aqui
 % https://tex.stackexchange.com/questions/33866/algorithm-tag-and-page-break
 % https://tex.stackexchange.com/questions/254044/caption-and-label-on-minted-code
 \DeclareCaptionFormat{mitedFormat}{%
@@ -133,12 +132,14 @@ pdfpagelabels=true,pdfauthor={José Doroteo Arango Arámbula},pdftitle={Mi traba
   font=footnotesize,singlelinecheck=off,format=mitedFormat,labelsep=space}
 \newenvironment{mintedCode}{\captionsetup{type=listing,style=minetdStyle}}{}
 
-% Normal minted setup for the whole document
+% Configurar minted para todo el documento
 \SetupFloatingEnvironment{listing}{name=Listado}
-% Normal minted setup for the C++ language
+% Configurar minted para el lenguaje C++
 \setminted[cpp]{frame=lines,framesep=0.25cm,baselinestretch=1,fontsize=\scriptsize,breaklines}
+% Excepto si es dento de un párrafo
 \setmintedinline[cpp]{fontsize=auto}
 
-\usepackage{csquotes} % Because if is not present HERE polyglossia throws a warning
-
+% Por que si no esta presente justo caqui polyglosia tira un warning
+\usepackage{csquotes} 
+% Para poner los logo de los programas de LaTeX, por ejemplo \hologo{XeLaTeX}
 \usepackage{hologo}

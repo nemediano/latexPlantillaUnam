@@ -11,8 +11,8 @@ Primero voy a mostrar cómo incluir algoritmos en forma de pseudocódigo.
 Y desde luego se incluyen en el índice y se pueden referencias así: 
 El Algoritmo~\ref{alg:euclid} es el primer algoritmo en la historia.
 Se puede referenciar una línea del algoritmo.
-El ciclo while termina en la línea line~\ref{euclidendwhile}.
-Las ídeas las tomé de este enlace \href{https://en.wikibooks.org/wiki/LaTeX/Algorithms#Typesetting_using_the_algorithmicx_package}{wikibook} y de éste \href{https://tex.stackexchange.com/questions/229355/algorithm-algorithmic-algorithmicx-algorithm2e-algpseudocode-confused}{post}.
+El ciclo while termina en la línea~\ref{euclidendwhile}.
+Las ideas las tomé de este enlace \href{https://en.wikibooks.org/wiki/LaTeX/Algorithms#Typesetting_using_the_algorithmicx_package}{wikibook} y de éste \href{https://tex.stackexchange.com/questions/229355/algorithm-algorithmic-algorithmicx-algorithm2e-algpseudocode-confused}{post}.
 
 El entorno de algoritmo como flotante puede salirse de los márgenes de una pagina si no lo configuras correctamente.
 Hay un \href{https://tex.stackexchange.com/questions/350434/adjust-width-of-algorithm-float}{truco} para hacerlo entrar en un cierto ancho.
@@ -51,12 +51,12 @@ int main() {
 
 Este es otro ejemplo de cómo incluir Python dentro de un párrafo: \mintinline{python}{print(x**2)}.
 Finalmente, lo más útil es incluir el código fuente desde un archivo externo: Vean  el Listado~\ref{lst:example} como ejemplo.
-Me ayude muchisimo de \href{https://tex.stackexchange.com/questions/252263/alignment-of-minted-line-numbers}{aquí} y de la \href{https://www.overleaf.com/learn/latex/Code_Highlighting_with_minted}{ayuda de Overleaf}.
+Me ayude muchísimo de \href{https://tex.stackexchange.com/questions/252263/alignment-of-minted-line-numbers}{aquí} y de la \href{https://www.overleaf.com/learn/latex/Code_Highlighting_with_minted}{ayuda de Overleaf}.
 Observa la configuración que hice en el archivo \verb|Thesis.sty| para ver cómo obtuve el resultado del Listado~\ref{lst:example}.
 
 \begin{listing}
 \inputminted[
-  firstline=54, %If you omit this two fields, the whole file is pulled
+  firstline=54, % Si omites estos dos parámetros, todo el archivo es usado
   lastline=68
   ]{cpp}{src/GccTest.cpp}
   \caption{Una implementación defectuosa de insertion sort}\label{lst:example}

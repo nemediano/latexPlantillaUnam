@@ -1,16 +1,16 @@
-%%%%Draft version
+% Versión de draft
 % \documentclass[12pt,letterpaper,spanish,draft,twoside]{book}
-%%%%Final version
+% Versión final
 \documentclass[12pt,letterpaper,spanish,twoside,final]{book}
 
 \usepackage{Thesis}
-% New bibliography system: biber (No bibtex needed)
+% Usa Biber como sistema de bibliografía (No necesitas BibTex)
 \usepackage[
   backend=biber
 ]{biblatex}
 \addbibresource{bibliografia.bib}
 
-%%%%For producing modified TOC with less space inbetween.
+% Para poner las diferentes tablas de contenido con poco espacio entre cada renglón
 \usepackage{tocloft}
 \setlength\cftparskip{-2pt}
 \setlength\cftbeforesecskip{1pt}
@@ -22,7 +22,7 @@
 
 \selectlanguage{spanish}
 
-%%%%Change numbering to roman
+% Cambia la numeración a números romanos
 \clearpage \pagenumbering{roman}
 %\listoftodos
 
@@ -38,8 +38,8 @@
 \include{resumen}
 \cleardoublepage
 
-%%%%For changing the title of table of contents
-%\renewcommand*\contentsname{}
+% Por si quisieras cambiar el nombre de la tabla de contenidos
+%\renewcommand*\contentsname{Tabla de contenido}
 \tableofcontents
 \cleardoublepage
 
@@ -51,7 +51,7 @@
 %\listofalgorithms
 %\cleardoublepage
 
-%%%%Change numbering to arabic
+% Cambia la numeración a números arábigos (normales)
 \clearpage \pagenumbering{arabic}
 
 \include{introduccion}
@@ -64,7 +64,7 @@
 
 \include{conclusiones}
 
-% If you want to change the bibliography style
+% Si quisieras cambiar el estilo de la bibliografía
 %\bibliographystyle{ieee_esp}
 \nocite{*}
 
