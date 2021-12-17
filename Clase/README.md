@@ -4,6 +4,7 @@ Esta plantilla sirve para hacer una presentación para una clase. Puedes ver el 
 
 La idea de la presentación es que se pueda presentar en más de una sesión. Cosas como el número de las diapositivas no importan.
 Solo importa el tema que se está tratando y donde se sitúa la dispositiva dentro de éste.
+Si esta no es el tipo de presentación que estas buscando puedes ver la [otra plantilla](../Conferencia)
 
 * El título, nombre del autor, la institución y la materia solo se incluyen en la dispositiva de título.
 * En cada diapositiva hay datos mínimos: solo la sección y el título del slide. Se maximiza el espacio

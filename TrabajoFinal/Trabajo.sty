@@ -1,22 +1,9 @@
 \ProvidesPackage{Trabajo}
 
-%%%%Installing texlive-lang-spanish
-%%%%is mandatory.
-% Language options (we set two languages in this text)
+% Opciones de lenguaje usando polyglossia (defino dos para este documento)
 \usepackage{polyglossia}
 \setmainlanguage{spanish}
 \setotherlanguage[variant=american]{english}
-
-%%%%Electronic version
-%\usepackage[obeyDraft, spanish, color=green!40, colorinlistoftodos=true]{todonotes}
-%%%%Print version
-% \usepackage[obeyDraft, spanish, backgroundcolor=white, linecolor=black, colorinlistoftodos=true]{todonotes}
-%%%%To completely disable todonotes, regardless of the draft version of the document.
-% \usepackage[disable, textsize=tiny, spanish, color=green!40]{todonotes}
-%%%%To enable todonotes, regardless of the draft version of the document.
-% \usepackage[textsize=tiny, spanish, color=green!40]{todonotes}
-%%%%Print version with enabled todonotes.
-% \usepackage[spanish, backgroundcolor=white, linecolor=black, colorinlistoftodos=true]{todonotes}
 
 %These four are required to create the cover
 \usepackage{graphicx} % Images
@@ -69,13 +56,20 @@
 \newtheorem{definition}{Definición}[section]
 \newtheorem{example}{Ejemplo}[section]
 
-%%%%For its use with todonotes (I put to obeyDraft), we must say that it's a final version
-%%%%otherwise no links will appear.
-\usepackage[final,unicode,colorlinks=true,citecolor=blue,linkcolor=blue,plainpages=false,
-pdfpagelabels=true,pdfauthor={José Doroteo Arango Arámbula},pdftitle={Mi trabajo de titulo muy largo y muy especifico como debe ser en una tesis}]{hyperref}
-%%%%If I set draft, no links will appear (for printable version).
-% \usepackage[draft,pdftex,unicode,colorlinks=true,citecolor=blue,linkcolor=blue,plainpages=false,
-% pdfpagelabels=true,pdfauthor={Laura Leonides}]{hyperref}
+% Poner los links en azul y definir los meta-datos del pdf
+\usepackage[
+final,
+unicode,
+colorlinks=true,
+citecolor=blue,
+linkcolor=blue,
+plainpages=false,
+urlcolor=blue,
+pdfpagelabels=true,
+pdfauthor={José Doroteo Arango Arámbula},
+pdftitle={Mi trabajo de titulo muy largo y muy especifico como debe ser en una tesis}
+]{hyperref}
+
 
 \setcounter{tocdepth}{4}
 \setcounter{secnumdepth}{4}

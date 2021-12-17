@@ -3,6 +3,7 @@
 Esta plantilla sirve para hacer una presentación en algún evento. Puedes ver el [pdf](presentacion.pdf) para ver un ejemplo del resultado.
 
 La idea de la presentación es que se trate de un evento especial que probablemente no se repita.
+Si esta no es el tipo de presentación que estas buscando puedes ver la [otra plantilla](../Clase)
 
 * La portada incluye la fecha, el título, nombre del autor y la institución que representa.
 * En cada diapositiva, hay datos del autor, la institución, el título corto de la presentación, la fecha, el evento y el número de slide.

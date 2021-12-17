@@ -2,7 +2,7 @@
 
 Esta plantilla sirve para elaborar un curriculum para buscar trabajo. Puedes ver el [pdf](curriculum.pdf) para ver un ejemplo del resultado.
 
-Asume que el autor tiene un posgrado o mucha experiencia profesional. Si este no es tu caso puedes ver la [otra plantilla](../Curriculum))
+Asume que el autor tiene un posgrado o mucha experiencia profesional. Si este no es tu caso puedes ver la [otra plantilla](../Curriculum)
 
 * Da espacio para __dos__ páginas (Nunca debes pasar de esto).
 * Incluye sub secciones de experiencia y para poner tus publicaciones selectas
