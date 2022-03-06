@@ -124,8 +124,10 @@
 % Definicion de colores especiales
 \definecolor{light_blue}{RGB}{4, 163, 198}
 \definecolor{azul_unam}{RGB}{0, 43, 122}
-\definecolor{dorado_unam}{RGB}{187, 136, 0}
+\definecolor{dorado_unam}{RGB}{187, 136, 0} % 0.65, 0.53 0
 \definecolor{amarillo_quemado}{RGB}{212, 180, 21}
+\definecolor{light_gray}{RGB}{245, 245, 245}
+\definecolor{light_golden}{RGB}{255, 245, 230} % 0.85, 0.73, 0.2 
 
 % Quitar la sombra entre las secciones y los titulos
 \makeatletter
@@ -142,7 +144,14 @@
 \setbeamercolor{section in head/foot}{fg=dorado_unam,bg=azul_unam}
 \setbeamercolor{frametitle}{fg=azul_unam,bg=dorado_unam}
 
-\setbeamercolor{block title}{bg=azul_unam}
+\setbeamertemplate{blocks}[rounded][shadow=false]
+% Disable shading between block title and block content
+\makeatletter
+\pgfdeclareverticalshading[lower.bg,upper.bg]{bmb@transition}{200cm}{color(0pt)=(lower.bg); color(4pt)=(lower.bg); color(4pt)=(upper.bg)}
+\makeatother
+
+\setbeamercolor{block title}{bg=dorado_unam,fg=azul_unam}
+\setbeamercolor{block body}{bg=light_golden,fg=black}
 
 % Quitar el redondeado de los slides con titulo
 \setbeamertemplate{frametitle}[default][colsep=-4bp,rounded=false,shadow=false]
