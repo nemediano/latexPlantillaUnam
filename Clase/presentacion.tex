@@ -140,9 +140,14 @@
 }
 \makeatother
 
+%Advertencia con el color de fondo tus imagenes pueden dejar de perderse en el fondo
+\setbeamercolor{background canvas}{bg=light_gray}
 \setbeamercolor{title}{fg=azul_unam,bg=dorado_unam}
 \setbeamercolor{section in head/foot}{fg=dorado_unam,bg=azul_unam}
 \setbeamercolor{frametitle}{fg=azul_unam,bg=dorado_unam}
+\setbeamercolor{itemize item}{fg=azul_unam}
+% Por una extraña razón en el innertheme circules, el color de los enumerates esta controlado por
+\setbeamercolor{item projected}{fg=dorado_unam}
 
 \setbeamertemplate{blocks}[rounded][shadow=false]
 % Disable shading between block title and block content
@@ -152,6 +157,7 @@
 
 \setbeamercolor{block title}{bg=dorado_unam,fg=azul_unam}
 \setbeamercolor{block body}{bg=light_golden,fg=black}
+
 
 % Quitar el redondeado de los slides con titulo
 \setbeamertemplate{frametitle}[default][colsep=-4bp,rounded=false,shadow=false]
