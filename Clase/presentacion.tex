@@ -1,6 +1,6 @@
 %\documentclass{beamer}
 % Aspect ratio
-\documentclass[aspectratio=43,11pt]{beamer}
+\documentclass[aspectratio=169,11pt]{beamer}
 % Aspect ratio:
 % 610 => 16:10 
 % 169 => 16:9
@@ -26,6 +26,12 @@
 \setotherlanguage[variant=american]{english}
 \usepackage{amssymb} % Los simbolos el los conjuntos numéricos
 
+\usepackage{anyfontsize}
+
+% Cambiar a las fuentes de matematicas del tipo article
+\usefonttheme[onlymath]{serif}
+
+
 % El sistema de bibliografá es Biber (no necesitas BibTeX)
 \usepackage[
   backend=biber
@@ -37,6 +43,9 @@
 % Para presentaciones usualmente no necestiamos la primer parte del caption
 \captionsetup[figure]{labelformat=empty}
 \captionsetup[table]{labelformat=empty}
+\captionsetup[subfigure]{labelformat=empty}
+% quitar los simbolos de navegacion
+\beamertemplatenavigationsymbolsempty
 % Tablas con estilo profesional
 \usepackage{booktabs}
 

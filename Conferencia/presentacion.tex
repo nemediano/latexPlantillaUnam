@@ -17,6 +17,9 @@
 
 \usepackage{anyfontsize}
 
+% Cambiar a las fuentes de matematicas del tipo article
+\usefonttheme[onlymath]{serif}
+
 % Los símbolos el los conjuntos numéricos
 \usepackage{amssymb} 
 
@@ -27,7 +30,9 @@
 % Para presentaciones usualmente no necesitamos la primer parte del caption
 \captionsetup[figure]{labelformat=empty}
 \captionsetup[table]{labelformat=empty}
-
+\captionsetup[subfigure]{labelformat=empty}
+% quitar los simbolos de navegacion
+\beamertemplatenavigationsymbolsempty
 % Tablas con estilo profesional
 \usepackage{booktabs}
 
